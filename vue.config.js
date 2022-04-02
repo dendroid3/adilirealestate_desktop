@@ -11,6 +11,6 @@ module.exports = {
     host:'0.0.0.0',
     compress: true,
     disableHostCheck: true,
-    public:'192.168.0.102',
+    public:'192.168.17.51',
   }
 };

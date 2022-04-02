@@ -1,26 +1,13 @@
 <template>
-  <v-app >
+  <v-app class="body">
     <v-app-bar
-      v-if="showNavBar"
-      class="d-sm-none grey lighten-3"
+      class="purple lighten-2"
       app
       dense
       color="white"
       dark
       flat
     >
-      <div v-if="!getUser.first_name">
-        <v-img
-        class="white pa-2 my-2 rounded"
-        :src="require(`./assets/logo.svg`)"
-        height="40"
-        @click="go('/')"
-        width="40"
-        contain
-      ></v-img>
-        <!-- <p @click="go('')" class="title">ProMIS</p> -->
-      </div>
-
       <div v-if="getUser.first_name">
         <v-img
         class="white pa-2 my-h2 rounded"
@@ -30,193 +17,70 @@
         max-width="40"
         contain
       ></v-img>
-        <!-- <p @click="goDashboard()" class="title">ProMIS</p> -->
       </div>
 
       <v-spacer></v-spacer>
-          <!-- <select class="bold search-2" @change="requestFilteredVacancies($event)" v-model="filter.type" v-if="showDiscover">
-            <option v-for="type in typesOfProperty" :key="type" :value="type" :disabled="type=='Check out what we have!'" 
-            :selected="type=='Discover!'">
-              {{(type == 'Discover!' || type == 'Show me everything!') ? type : type  + 's' }}
-            </option>
-          </select> -->
-      <v-spacer></v-spacer>
-      <!-- <v-icon 
-      v-if="getUser.id"
-      class="ml-1 mr-2"
-      @click="go('')"
-      dark>
-        mdi-home
-      </v-icon> -->
-      
-      <!-- <v-menu 
-          transition="slide-y-transition"
-          bottom
-          open-on-hover>
-          <template v-slot:activator="{ on, attrs }">
-          <v-icon 
-          class="mr-1 "
-          v-bind="attrs"
-          v-on="on">
-              mdi-account
-          </v-icon>
-          </template>
-              
-          <v-list v-if="!getUser.id">
-              <v-list-item
-              @click="go('login')"
-              class="pointer">
-                  Login
-              </v-list-item>
-              <v-list-item 
-              @click="go('register')"
-              class="pointer">
-                  Register
-              </v-list-item>
-          </v-list>    
-          <v-list v-if="getUser.id">
-              <v-list-item
-              @click="go('login')"
-              class="pointer">
-                  Logout
-              </v-list-item>
-          </v-list>
-
-          <v-list v-if="getUser.status" > -->
-          <!--<v-list-item
-              @click="logout"
-              class="pointer">
-                  Logout
-              </v-list-item>
-          </v-list> -->
-      <!-- </v-menu> -->
-
-    <div class="filter pa-2" @click="toogle" v-if="showDiscover"
-    style="border-top-left-radius: 5px; border-top-right-radius: 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 0;">
-       <v-icon class="black--text">
-        mdi-filter
-      </v-icon>
-    </div>
-    <div class="white pa-2" @click="home_drawer = true" v-if="showDiscover"
-    style="border-top-left-radius: 0; border-top-right-radius: 5px; border-bottom-left-radius: 0; border-bottom-right-radius: 5px;">
-      <v-icon class="purple--text">
-        mdi-menu
-      </v-icon>
-    </div>
-    <div class="white pa-2" @click="home_drawer = true" v-if="!showDiscover"
-    style="border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
-      <v-icon class="purple--text">
-        mdi-menu
-      </v-icon>
-    </div>
+      <section v-if="!getUser.first_name">
+        <v-btn text small class="purple white--text mx-2"
+        @click="go('/login')">
+          Login
+        </v-btn>
+        <v-btn text small class="purple white--text mx-2"
+        @click="go('/register')">
+          Register
+        </v-btn>
+      </section>
+      <section v-else>
+        <v-btn text small class="purple white--text mx-2"
+        @click="go('/dashboard')">
+          {{getUser.email}}
+        </v-btn>
+      </section>
     </v-app-bar>
-    <div class="white--text white rounded menu" @click="drawer = true" v-if="!showNavBar && !drawer">
-      <v-icon>
-        mdi-menu
-      </v-icon>
-    </div>
-    <div class="white--text white rounded menu" @click="drawer = true" v-if="!showNavBar && drawer">
-      <v-icon class="red--text">
-        mdi-close
-      </v-icon>
-    </div>
-    <v-navigation-drawer
-      class="grey lighten-2"
-      v-model="home_drawer"
-      temporary
-      clipped 
-      right
-      fixed
-      width = '90%'
-    >
-    <div class="d-flex justify-end">
-      <div class="white pa-2 rounded" @click="home_drawer = false">
-       <v-icon class="red--text">
-        mdi-close
-      </v-icon>
-    </div>
 
-    </div>
-      <home-navdrawer />
-    </v-navigation-drawer>
-
-    
-    <v-navigation-drawer
-      class="pt-4"
-      v-model="drawer"
-      temporary
-      clipped 
-      fixed
-      width = '200'
-    >
-      <v-list
-        nav
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <div>
-            <v-list-item-avatar
-              class="elevation-20"
-              tile
-              size="80"
-              style="background-color: tomato;"
-            >
-            <div class="white--text text-center">
-              <div class="d-flex justify-center">
-                <span style="font-size:3rem; font-weight: 900;" class="d-flex">
-                  {{initials}}
-                </span>
-              </div>
-                <v-divider dark/>
-                <span>
-                  {{'standard'}}
-                </span>
-              </div>
-            </v-list-item-avatar>
-          </div>
-          <v-list-item @click="go('/')">
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item  @click="go('account/edit')">
-            <v-list-item-title>Edit Account</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item  @click="go('add_property')">
-            <v-list-item-title>Add Property</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item  @click="go('account/properties')">
-            <v-list-item-title>My Properties</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item  @click="go('account/units')">
-            <v-list-item-title>My Units</v-list-item-title>
-          </v-list-item>
-
-          
-          <v-list-item  @click="logOut" style="position:fixed; bottom: 0;">
-            <v-list-item-title>
-              <v-btn class="red white--text">
-                Log Out
-              </v-btn>
-            </v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-card class="red pa-4 white--text d-none d-sm-block" style="margin-top: 9rem;  position: fixed; top: 20%;left: 10%;">
-      <span>
-        {{'sorry.. this demo is intended for small screens. Kindly switch to a mobile phone to proceed'}}
-      </span>
-    </v-card>
-    <v-main class="main d-sm-none">
+    <v-main class="main">
       <alert-box />
-
-      <router-view />
+      <v-row class="no-gutters">
+        <v-col class="col-2 grey lighten-2">
+          <left-bar></left-bar>
+          <!-- <home-navdrawer /> -->
+        </v-col> 
+        <v-col class="col-3 grey lighten-2">
+          
+          <v-row class="grey lighten-2 pt-4 no-gutters">
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`properties`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/properties`"/>
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`units`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/units`"/>
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`vacancies`" :value="vacancies" />
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`on sale`" :value="0" />
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`bookings`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/properties`"/>
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`land`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/land`"/>
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`enquiries`" :value="vacancies" />
+            </v-col>
+            <v-col class="col-3 px-1 mb-1 bold" > 
+              <dashboardTab :title="`logs`" :value="0" />
+            </v-col>
+          </v-row>
+          
+        <p style="font-size: 2.3rem;" class="backg--text"> Logs </p>
+          <log-card v-for="c in counter" :key="c"/>
+        </v-col>
+        <v-col style="overflow: scroll; height: 100vh; margin-bottom:5rem;" > 
+          <router-view />
+        </v-col>
+      </v-row>
     </v-main>
     <info-box v-if="getInfoBoxDetails && getInfoBoxDetails.status"/>
   </v-app>
@@ -225,8 +89,11 @@
 import { mapActions, mapGetters } from 'vuex';
 
 import infoBox from './components/widgets/infoBox.vue'
+import leftBar from './components/leftBar.vue';
 import alertBox from './components/widgets/alertBox.vue'
 import homeNavdrawer from './components/widgets/homeNavdrawer.vue'
+import LogCard from './components/logCard.vue';
+import dashboardTab from './components/dashboard/dashboardTab.vue';
 
 export default {
   name: 'App',
@@ -234,16 +101,25 @@ export default {
   components:{
     infoBox,
     alertBox,
-    homeNavdrawer
+    homeNavdrawer,
+    leftBar,
+    LogCard,
+    dashboardTab
   },
 
   computed: {
-  ...mapGetters(['getUser', 'getInfoBoxDetails', 'getUser']),
+  ...mapGetters(['getUser', 'getInfoBoxDetails', 'getUser', 'getMyProperties', 'getMyUnits']),
     initials(){
       let str = this.getUser.first_name + ' ' + this.getUser.last_name
       let matches = str.match( /\b(\w)/g )
       return matches.join('').substring(0,2)
       // return 'o'
+    },
+    vacancies(){
+      if(!this.getMyUnits){
+        return 0
+      }
+      return this.getMyUnits.filter((unit) => (Number(unit.vacancy) == 1)).length
     },
     options () {
       return {
@@ -255,6 +131,8 @@ export default {
   },
   data(){
     return{
+      fetching_my_properties: true,
+      fetching_my_units: true,
       drawer: false,
       home_drawer: false,
       group: null,
@@ -275,7 +153,8 @@ export default {
         type: 'Discover!'
       },
       applying: false,
-      showDiscover: true
+      showDiscover: true,
+      counter: 10
     }
   },
   
@@ -348,6 +227,10 @@ export default {
     font-weight: 900;
     font-size: 1.1rem;
   }
+  body{
+    overflow-y: hidden;
+    height: 100vh;
+  }
   
   .bold-2{
     font-weight: 900;
@@ -377,7 +260,7 @@ export default {
   }
   .backg--text{
     color: rgba(21,110,82,1);
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   
   .half{
@@ -427,10 +310,35 @@ export default {
   background-color: white;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .filter{
   border-left: solid purple 1px;
   border-top: solid purple 1px;
   border-bottom: solid purple 1px;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  direction:rtl;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  direction:rtl;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  direction:rtl;
+} 
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: purple;
+} 
 </style>

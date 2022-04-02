@@ -26,7 +26,8 @@ export default {
   .wrapper{
     position: fixed;
     bottom: 0.5rem;
+    max-width: 30vw;
     width: calc(100vw - 1rem);
-    left: 0.5rem;
+    right: 0.5rem;
   }
 </style>

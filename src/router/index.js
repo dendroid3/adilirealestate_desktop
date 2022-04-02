@@ -81,7 +81,7 @@ const routes = [
     name: 'EditAccount',
     component: () => import('../views/dashboard/EditAccount')
   },
-  {
+   {
     path: '/about',
     name: 'About',
     // route level code-splitting

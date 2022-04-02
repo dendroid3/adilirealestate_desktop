@@ -8,6 +8,9 @@
       <!-- <v-icon @click="toogle(true)" small class="grey  pa-1 rounded white--text" v-if="!updatingFilter">
         mdi-filter
       </v-icon> -->
+      <v-icon>
+        mdi-filter
+      </v-icon>
       <v-progress-circular
         v-if="updatingFilter"
         indeterminate
@@ -15,6 +18,7 @@
         size="25"
         class="ml-2"
       ></v-progress-circular>
+      dssd
       <!-- {{'getSetFilters.lowest_rent:'}}  -->
       <!-- {{getSetFilters}} -->
     </div>

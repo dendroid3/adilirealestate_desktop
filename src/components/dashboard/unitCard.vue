@@ -124,7 +124,7 @@ export default {
   .bottom-line::after{
     content: '';
     display: inline;
-    border-bottom: solid 1px green;
+    border-bottom: solid 1px white;
     position: absolute;
     bottom: 0;
     width: 80%;

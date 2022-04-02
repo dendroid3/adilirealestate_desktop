@@ -33,7 +33,7 @@
             </span>
             <br>
 
-            <span class="">
+            <span class="card">
               {{property.description}}
             </span> 
           </div>
@@ -154,10 +154,13 @@ export default {
   .bottom-line{
     position: relative;
   }
+  .card{
+    font-size: 0.8rem;
+  }
   .bottom-line::after{
     content: '';
     display: inline;
-    border-bottom: solid 1px green;
+    border-bottom: solid 1px white;
     position: absolute;
     bottom: 0;
     width: 80%;

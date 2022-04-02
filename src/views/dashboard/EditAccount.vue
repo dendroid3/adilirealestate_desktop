@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="grey lighten-2 backg--text">
     <!-- I am edit account <br> -->
       <p class="px-4" style="font-size: 2.3rem;"> Edit Account</p>
    <!-- {{getUser}} -->

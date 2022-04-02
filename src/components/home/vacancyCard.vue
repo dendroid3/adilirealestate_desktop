@@ -17,10 +17,8 @@
       :key="i">
         <v-img class="img rounded  lighten-4 ma-0"
         contain
-        :aspect-ratio="1/1"
         :src="fixImageUrl(image.url)"
         />
-        {{image}}
       </v-carousel-item>
       
           <!-- <v-carousel-item
@@ -51,15 +49,15 @@
     </v-carousel>
     <v-row class="grey lighten-2 no-gutters" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
       <v-col class="col-12 d-flex justify-center pa-1 text--bold" style="font-weight: 900;" @click="go('view/unit/' + vacancy.id)">
-        <h2>{{vacancy.name}}</h2> 
+        <span>{{vacancy.name}}</span> 
         <v-icon class="mx-1 green--text">
           mdi-at
         </v-icon>
 
-        <h2> {{vacancy.location}} </h2>
+        <span> {{vacancy.location}} </span>
       </v-col>
-      <v-col class="col-12 px-4 text--bold" style="font-weight: 900;" @click="go('view/unit/' + vacancy.id)">
-        <h5> {{vacancy.description}} </h5>
+      <v-col class="col-12 px-4 min" @click="go('view/unit/' + vacancy.id)">
+        <span> {{vacancy.description}} </span>
       </v-col>
       <v-col class="col-6 px-4" style="font-weight: 900;">
         {{vacancy.rent}} {{'/= pm'}}
@@ -120,3 +118,9 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+  .min{
+    font-size: 0.8rem;
+  }
+</style>
+

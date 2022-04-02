@@ -1,19 +1,7 @@
 <template lang="html">
   <div>
-    <user-card />
-    <v-row class="grey lighten-2">
-      <v-col class="col-4 px-4 bold" > 
-        <dashboardTab :title="`properties`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/properties`"/>
-      </v-col>
-      <v-col class="col-4 px-4 bold" > 
-        <dashboardTab :title="`units`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/units`"/>
-      </v-col>
-      <v-col class="col-4 px-4 bold" > 
-        <dashboardTab :title="`vacancies`" :value="vacancies" />
-      </v-col>
-    </v-row>
-    
-    <title-strip :title="`my properties`" :add_url ="`add_property`" :mini_tab="false" :click_url="`/account/properties`" />
+    <!-- <user-card /> -->
+    <title-strip :title="`My Properties`" :add_url ="`add_property`" :mini_tab="false" :click_url="`/account/properties`" />
     <div class="dashboard-section-wrapper">
       <property-card v-for="my_property in getMyProperties" :key="my_property.id" :property="my_property" />
       <div v-if="!getMyProperties[0]"> 
@@ -24,7 +12,7 @@
       </div>
     </div>
     
-    <title-strip :title="`my units`" :mini_tab="true" :click_url="`/account/units`"/>
+    <title-strip :title="`My Units`" :mini_tab="true" :click_url="`/account/units`"/>
     <!-- {{getMyUnits}} -->
     <div class="dashboard-section-wrapper">
       <unit-card  v-for="my_unit in units" :key="my_unit.id" :unit="my_unit" />
@@ -78,12 +66,6 @@ export default {
   },
   computed:{
     ...mapGetters(['getMyProperties', 'getMyUnits', 'getUnitsFilter']),
-    vacancies(){
-      if(!this.getMyUnits){
-        return 0
-      }
-      return this.getMyUnits.filter((unit) => (Number(unit.vacancy) == 1)).length
-    },
     units(){
       // if(!this.getMyUnits){
       //   return

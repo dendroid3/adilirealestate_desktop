@@ -1,15 +1,15 @@
 <template lang="html">
-  <div>
+  <div class="pointer">
     <div class="white rounded elevation-1" @click="go">
-      <div class="d-flex justify-center black--text bold">
+      <div class="d-flex justify-center black--text min">
         {{title}}
       </div>
       <v-divider inset/>
-      <div class="d-flex justify-end align-center px-1 black--text">
+      <div class="d-flex justify-end align-center px-1 black--text min">
         <span> {{value}} </span>
       </div>
       <v-progress-linear
-      v-if="loading"
+        v-if="loading"
         indeterminate
         rounded
         color="grey darken-2"
@@ -37,3 +37,8 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+  .min{
+    font-size: 0.8rem;
+  }
+</style>
