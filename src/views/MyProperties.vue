@@ -38,21 +38,22 @@
                 'red-border  transparent lighten-4': item.vacancy,
                 'green': !item.vacancy
                 }">
-                  <td @click="goProperty" class="green-border">{{ item.name }}</td>
-                  <td @click="goProperty" >{{ item.type }}</td>
-                  <td @click="goProperty" >{{ item.location }}</td>
-                  <td @click="goProperty" >{{ item.tenants }}</td>
-                  <td @click="goProperty" >{{ item.units_count }}</td>
-                  <td @click="goProperty" >{{ item.units_count }}</td>
-                  <td @click="goProperty" >{{ item.vacancies_count }}</td>
+                  <td @click="goProperty(item)" class="green-border">{{ item.name }}</td>
+                  <td @click="goProperty(item)" >{{ item.type }}</td>
+                  <td @click="goProperty(item)" >{{ item.location }}</td>
+                  <td @click="goProperty(item)" >{{ item.tenants }}</td>
+                  <td @click="goProperty(item)" >{{ item.units_count }}</td>
+                  <td @click="goProperty(item)" >{{ item.units_count }}</td>
+                  <td @click="goProperty(item)" >{{ item.vacancies_count }}</td>
                   <td>
                     <v-btn
-                    class="red white--text"
+                      class="red white--text"
                       dense
                       x-small
                       inset
                       ripple
-                    > vacate
+                    > 
+                      vacate
                     </v-btn>
                   </td>
                 </tr>
@@ -116,6 +117,9 @@ export default {
     },
     methods:{
       goProperty(property){
+        console.log('property')
+        console.log(property)
+        console.log('property')
         this.$router.push('/property/' + property.id)
       },
     }

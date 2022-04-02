@@ -41,7 +41,7 @@
     <v-main class="main">
       <alert-box />
       <v-row class="no-gutters">
-        <v-col class="col-2 grey lighten-2">
+        <v-col class="col-1 grey lighten-2">
           <left-bar></left-bar>
           <!-- <home-navdrawer /> -->
         </v-col> 
@@ -77,7 +77,7 @@
         <p style="font-size: 2.3rem;" class="backg--text"> Logs </p>
           <log-card v-for="c in counter" :key="c"/>
         </v-col>
-        <v-col style="overflow: scroll; height: 100vh; margin-bottom:5rem;" > 
+        <v-col  style="overflow: scroll; height: 100vh; margin-bottom:5rem;" > 
           <router-view />
         </v-col>
       </v-row>
@@ -216,7 +216,8 @@ export default {
 
   html{
       font-family: dosis;
-      overflow: auto;
+      width: 100vw;
+      /* overflow: auto; */
   }
   #app{
       padding: 0;
@@ -230,6 +231,7 @@ export default {
   body{
     overflow-y: hidden;
     height: 100vh;
+    pointer-events: auto;
   }
   
   .bold-2{

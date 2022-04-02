@@ -8,7 +8,7 @@
         <div>
           <v-list-item-avatar
             @click="go('dashboard')"
-            class="elevation-20 purple lighten-2"
+            class="elevation-20 purple pointer lighten-2"
             tile
             size="80"
           >
@@ -26,33 +26,33 @@
           </v-list-item-avatar>
         </div>
 
-        <v-list-item  @click="sendRequest" small>
-          <v-list-item-title>Verify Account</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  @click="sendRequest" small> -->
+          <v-list-item-title class="pointer mb-1" @click="sendRequest" dense>Verify Account</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('account/edit')">
-          <v-list-item-title>Edit Account</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  @click="go('account/edit')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('account/edit')">Edit Account</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('add_property')">
-          <v-list-item-title>Add Property</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  class="pointer mb-1" @click="go('add_property')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('add_property')">Add Property</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('account/properties')">
-          <v-list-item-title>My Properties</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  class="pointer mb-1" @click="go('account/properties')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('account/properties')">My Properties</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('account/units')">
-          <v-list-item-title>My Units</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  class="pointer mb-1" @click="go('account/units')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('account/units')">My Units</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('account/units')">
-          <v-list-item-title>My Land</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  class="pointer mb-1" @click="go('account/units')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('account/units')">My Land</v-list-item-title>
+        <!-- </v-list-item> -->
 
-        <v-list-item  @click="go('')">
-          <v-list-item-title>Available Listings</v-list-item-title>
-        </v-list-item>
+        <!-- <v-list-item  class="pointer mb-1" @click="go('')"> -->
+          <v-list-item-title class="pointer mb-1" @click="go('')">Available Listings</v-list-item-title>
+        <!-- </v-list-item> -->
         
         <v-list-item  @click="logOut" style="position:fixed; bottom: 0;">
           <v-list-item-title>
