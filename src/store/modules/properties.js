@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import router from '../../router'
 const state = {
   added_property: {},
   my_properties: [],
@@ -85,15 +85,30 @@ const actions = {
       dispatch('toogleAlertBox', alert_box_info, {root: true})
       return false
     } catch (e) {
+      dispatch('processError', [e.response.status, ' adding property'], {root:true})
+    }
+  },
+  processError({dispatch}, [error_code, function_name]){
+    if(error_code == 401){
+      console.log('errororrororo')
       const alert_box_info = {
         status: true,
-        information: 'Something has gone wrong while, adding property, contact admin for help.',
+        information: 'You are not logged in',
+        code: 'error'
+      }
+      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('logout', null, {root: true})
+      router.push('/login')
+
+    } else {
+      const alert_box_info = {
+        status: true,
+        information: 'Something has gone wrong while ' + function_name + ', contact admin for help.',
         code: 'error'
       }
       dispatch('toogleAlertBox', alert_box_info, {root: true})
     }
   },
-
   async addPropertyImages({getters, dispatch}, data){
     try{
       const response = await
@@ -130,12 +145,7 @@ const actions = {
       dispatch('toogleAlertBox', alert_box_info, {root: true})
       return false
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while adding property images, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' adding property'], {root:true})
     }
   },
 
@@ -162,13 +172,7 @@ const actions = {
       dispatch('toogleAlertBox', alert_box_info, {root: true})
       return false
     } catch (e) {
-      
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while adding units, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' adding units'], {root:true})
     }
   },
 
@@ -195,12 +199,7 @@ const actions = {
       // router.push('/dashboard')
       return false
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: "Something has gone wrong while adding units' images, contact admin for help.",
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' adding units`s images '], {root:true})
     }
   },
 
@@ -229,12 +228,7 @@ const actions = {
 
       return false
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: "Something has gone wrong while adding units' details, contact admin for help.",
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError',[e.response.status, ' adding  units`s details '], {root:true})
     }
   },
 
@@ -261,12 +255,7 @@ const actions = {
       dispatch('toogleAlertBox', alert_box_info, {root: true})
       return false
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: "Something has gone wrong while adding property's details, contact admin for help.",
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError',[e.response.status, ' adding pr operty`s details '], {root:true})
     }
   },
   
@@ -279,12 +268,10 @@ const actions = {
       commit('SET_MY_PROPERTY', response.data.property)
       return true
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while fetching your property, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      console.log('e.response.status')
+      console.log(e.response.status)
+      console.log(e.response.status)
+      dispatch('processError', [e.response.status, ' fetching your property '], {root:true})
     }
   }, 
 
@@ -296,12 +283,7 @@ const actions = {
       commit('SET_MY_PROPERTIES', response.data.properties)
 
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while fetching your properties, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError',[e.response.status, ' fetching  your properties '], {root:true})
     }
   },
   
@@ -313,12 +295,7 @@ const actions = {
       commit('SET_MY_UNITS', response.data.units)
 
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while fetching your units, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' fetching your units '], {root:true})
     }
   },
 
@@ -334,12 +311,7 @@ const actions = {
       }
 
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: "Something has gone wrong while changing your unit's vacancy status, contact admin for help.",
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' changing your unit`s vacancy status '], {root:true})
     }
   },
 
@@ -353,13 +325,7 @@ const actions = {
       }
       // return data.vacancy
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: e,
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
-      console.log(e)
+      dispatch('processError', [e.response.status, ' changing your property`s vacancy status '], {root:true})
     }
   },
 
@@ -394,12 +360,7 @@ const actions = {
         return response.data.vacancy
       }
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while, fetching vacancies, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError',[e.response.status,  ' fetching vacancies '], {root:true})
     }
   },
 
@@ -431,12 +392,7 @@ const actions = {
         return false
       }
     } catch (e) {
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while filtering vacancies, filtering vacancies, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError', [e.response.status, ' filtering vacancies '], {root:true})
       return false
     }
   },
@@ -453,13 +409,7 @@ const actions = {
         //standalone property
       // }
     }catch(e){
-      
-      const alert_box_info = {
-        status: true,
-        information: 'Something has gone wrong while fetching this property, contact admin for help.',
-        code: 'error'
-      }
-      dispatch('toogleAlertBox', alert_box_info, {root: true})
+      dispatch('processError',[e.response.status,  ' while fetching this property '], {root:true})
       return true
     }
   }
