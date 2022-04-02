@@ -216,7 +216,7 @@ export default {
 
   html{
       font-family: dosis;
-      width: 100vw;
+      /* width: 70vw; */
       /* overflow: auto; */
   }
   #app{
