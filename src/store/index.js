@@ -34,7 +34,7 @@ export default new Vuex.Store({
         paths: ['auth.token'],
         storage: {
             getItem: key => Cookies.get(key),
-            setItem: (key, value) => Cookies.set(key, value, { expires: 3, secure: false }),
+            setItem: (key, value) => Cookies.set(key, value, { expires: 999, secure: false }),
             removeItem: key => Cookies.remove(key)
           }
     }),

@@ -34,15 +34,11 @@
               <template v-slot:item="{ item }">
                 <tr
                 >
-                  <td :class="{
-                  'red-border  ': item.vacancy_count > 0,
-                  'green-border': !item.vacancy_count == 0
-                  }">
+                  <td class="green-border">
                     {{ item.property }}
                   </td>
-                  <td>{{ item.name }}</td>
                   <td>{{ item.type }}</td>
-                  <td>{{ item.location }}</td>
+                  <td>{{ item.name }}</td>
                   <td>{{ item.tenants }}</td>
                   <td>{{ item.rent }}</td>
                   <td>
@@ -99,16 +95,17 @@ export default {
       search: '',
       headers: [
         { text: 'Property', value: 'units_count' },
+        { text: 'Type', value: 'type' },
+
         {
           text: 'Name',
           align: 'start',
           sortable: true,
           value: 'name',
         },
-        { text: 'Type', value: 'type' },
-        { text: 'Location', value: 'location' },
         { text: 'Tenants', value: 'tenants' },
         { text: 'Rent', value: 'rent' },
+        { text: 'Action', value: null },
       ],
     }
   }

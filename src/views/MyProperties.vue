@@ -42,7 +42,7 @@
                   <td @click="goProperty(item)" >{{ item.type }}</td>
                   <td @click="goProperty(item)" >{{ item.location }}</td>
                   <td @click="goProperty(item)" >{{ item.tenants }}</td>
-                  <td @click="goProperty(item)" >{{ item.units_count }}</td>
+                  <td @click="goProperty(item)" >{{ item.rent }}</td>
                   <td @click="goProperty(item)" >{{ item.units_count }}</td>
                   <td @click="goProperty(item)" >{{ item.vacancies_count }}</td>
                   <td>
@@ -111,7 +111,7 @@ export default {
           { text: 'Rent', value: 'rent' },
           { text: 'Units', value: 'units_count' },
           { text: 'Vacancies', value: 'vacancies_count' },
-          { text: 'Status', value: 'null' },
+          { text: 'Action', value: 'null' },
         ],
       }
     },

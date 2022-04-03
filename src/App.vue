@@ -54,23 +54,23 @@
             <v-col class="col-3 px-1 mb-1 bold" > 
               <dashboardTab :title="`units`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/units`"/>
             </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`vacancies`" :value="vacancies" />
+            <v-col class="col-3 px-1 mb-1 bold"> 
+              <dashboardTab :title="`vacancies`" :value="vacancies"  :click_url="`/account/vacancies`"/>
             </v-col>
             <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`on sale`" :value="0" />
+              <dashboardTab :title="`on sale`" :value="0" :click_url="`/account/onsale`"/>
             </v-col>
             <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`bookings`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/properties`"/>
+              <dashboardTab :title="`bookings`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/bookings`"/>
             </v-col>
             <v-col class="col-3 px-1 mb-1 bold" > 
               <dashboardTab :title="`land`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/land`"/>
             </v-col>
             <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`enquiries`" :value="vacancies" />
+              <dashboardTab :title="`enquiries`" :value="vacancies" :click_url="`/account/enquiries`"/>
             </v-col>
             <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`logs`" :value="0" />
+              <dashboardTab :title="`logs`" :value="0" :click_url="`/account/logs`"/>
             </v-col>
           </v-row>
           
@@ -316,6 +316,12 @@ export default {
   cursor: pointer;
 }
 
+  .red-border{
+    border-left: solid 4px red !important;
+  }
+  .green-border{
+    border-left: solid 4px green;
+  }
 .filter{
   border-left: solid purple 1px;
   border-top: solid purple 1px;

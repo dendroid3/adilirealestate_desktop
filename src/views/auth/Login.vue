@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="grey lighten-3 d-flex align-center" style="height: 100%;">
+  <div class="grey lighten-3 d-flex align-center justify-center" style="height: 100%;">
     <v-form ref="form" class="pa-4">
       <p style="font-size: 2.3rem;"> login</p>
       <v-text-field

@@ -81,6 +81,46 @@ const routes = [
     name: 'EditAccount',
     component: () => import('../views/dashboard/EditAccount')
   },
+  {
+    path: '/account/onsale',
+    name: 'OnSale',
+    component: () => import('../views/Onsale')
+  },
+  {
+    path: '/account/enquiries',
+    name: 'Enquiries',
+    component: () => import('../views/Enquiries')
+  },
+  {
+    path: '/account/logs',
+    name: 'Logs',
+    component: () => import('../views/Logs')
+  },
+  {
+    path: '/account/bookings',
+    name: 'Bookings',
+    component: () => import('../views/Bookings')
+  },
+  {
+    path: '/account/land',
+    name: 'Land',
+    component: () => import('../views/Land')
+  },
+  {
+    path: '/account/vacancies',
+    name: 'Vacancies',
+    component: () => import('../views/Vacancies')
+  },
+  {
+    path: '/add_property_for_sale',
+    name: 'AddPropertyForSale',
+    component: () => import('../views/AddPropertyForSale')
+  },
+  {
+    path: '/add_land',
+    name: 'AddLand',
+    component: () => import('../views/AddLand')
+  },
    {
     path: '/about',
     name: 'About',
