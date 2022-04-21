@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="grey lighten-3 " style="height: 100%;">
-    <v-form ref="form" class="pa-4">
+  <div class="grey lighten-3 d-flex justify-center pb-4">
+    <v-form ref="form" class="pa-4" style="width: 50%;">
       <p style="font-size: 2.3rem;"> register</p>
       <div class="d-flex">
         <v-text-field

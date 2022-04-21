@@ -1,57 +1,76 @@
 <template lang="html">
   <div>
-
-    <navigation-strip id="top"/>
-    <!-- {{getVacancies}} -->
-    <v-row class="no-gutters">
-      <v-col class="col-12">
-        <div  v-for="vacancy in getVacancies" :key="vacancy.id">
-          <div v-if="!vacancy.units">
-            <vacancy-card :vacancy="vacancy" />
-          </div>
-          <div v-if="vacancy.units && vacancy.units[0]">
-            <property-card :vacancy="vacancy" />
-          </div>
+    <!-- <footer-strip /> -->
+    <div id="home">
+      <top-pics />
+      <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
+        Home
+      </v-btn>
+      <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
+        Blogs
+      </v-btn>
     </div>
-      </v-col>
-    </v-row>
-    <div v-if="!getVacancies[0]"> 
-      <empty-here />
-      <p class="text-center text-grey">
-        {{"No Vacancies Listed"}}
-      </p>
+    <div id="about">
+      <about-card />
     </div>
-    
-    <links-strip />
-    <div  style="position: fixed; right:0.25rem; bottom: 5rem; z-index:900; border-radius: 50%;" class="rounded purple pa-1" @click="goTop">
-      <v-icon color="white">
-        mdi-arrow-up
-      </v-icon>
+    <div id="properties">
+      <properties-card />    
     </div>
-
-    <footer-strip />
+    <div id="blogs" ref="blogs">
+      <blogs-section />
+    </div>
+    <div id="faqs">
+      <faqs-section />
+    </div>
+    <div id="contact" class="contact">
+      <!-- Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum beatae modi incidunt iste id deserunt numquam molestias aliquam perspiciatis. In mollitia animi minima? Sit ducimus minus id eaque soluta. Ex quia quasi ad eveniet eaque placeat doloremque sunt vel quas, accusamus sint doloribus nostrum sed praesentium eius id ducimus iste consequatur, voluptatem eligendi molestias illo atque! Pariatur possimus dolore voluptatum quas molestiae et quisquam veniam atque ea mollitia aspernatur molestias fuga officiis aliquam sint facilis excepturi, libero culpa hic nemo omnis provident in temporibus. Sunt magni recusandae excepturi provident dolor. -->
+      <contact-us />
+    </div>
+    <div class="grey text-center" style="height: 10rem;">
+      (c) Adili Real Estate | 2022
+    </div>
   </div>
+
 </template>  
 <script>
-import navigationStrip from '../components/home/navigationStrip.vue'
-import welcomeCard from '../components/home/welcomeCard.vue'
-import vacancyCard from '../components/home/vacancyCard.vue'
-import propertyCard from '../components/home/propertyCard.vue'
-import linksStrip from '../components/home/linksStrip.vue'
+// import navigationStrip from '../components/home/navigationStrip.vue'
+// import welcomeCard from '../components/home/welcomeCard.vue'
+// import vacancyCard from '../components/home/vacancyCard.vue'
+// import propertyCard from '../components/home/propertyCard.vue'
+// import linksStrip from '../components/home/linksStrip.vue'
 import footerStrip from '../components/home/footerStrip.vue'
-import emptyHere from '../components/widgets/emptyHere.vue'
+import propertiesCard from '../components/home/propertiesCard.vue'
+import contactUs from '../components/home/contactUs.vue'
+import blogsSection from '../components/home/blogsSection.vue'
+import faqsSection from '../components/home/faqsSection.vue'
+// import emptyHere from '../components/widgets/emptyHere.vue'
+
+import topPics from '../components/home/topPics.vue'
+import aboutCard from '../components/home/aboutCard.vue'
+
 import { mapActions, mapGetters } from 'vuex'
+import AboutCard from '../components/home/aboutCard.vue'
+import ContactUs from '../components/home/contactUs.vue'
 export default {
   name: 'Home',
   components: {
-    navigationStrip,
-    welcomeCard,
-    vacancyCard,
-    footerStrip,
-    propertyCard,
-    linksStrip,
-    emptyHere
-  },
+    topPics,
+    contactUs,
+    faqsSection,
+    aboutCard,
+    propertiesCard,
+    blogsSection,
+    // navigationStrip,
+    // welcomeCard,
+    // vacancyCard,
+    footerStrip
+    // propertyCard,
+    // linksStrip,
+    // emptyHere
+    ,
+    AboutCard,
+    ContactUs
+},
   computed:{
     ...mapGetters(['getVacancies', 'isWelcomeCardOpen', 'getPropertiesView']),
     options () {
@@ -65,7 +84,8 @@ export default {
   data(){
     return {
       counter: 5,
-      page_counter: [1,2,3,4,5,6],
+      page_counter: [1,2,3,4,5,6], 
+      blogs_content: ''
     }
   },
   methods:{
@@ -73,12 +93,21 @@ export default {
     goTop(){
       this.$vuetify.goTo('#top', this.options)
     },
+    goToSection(element_id){
+      console.log('going to section')
+      document.getElementById(element_id).scrollIntoView({behavior: 'smooth', block: "end"})
+      // this.$vuetify.goTo(this.blogs_content, this.options)
+    },
   },
   mounted(){
     this.fetchVacancies().then((res) => {
       this.goTop()
     })
     this.toogleWelcomeCard(true)
+    this.blogs_content = this.$refs.blogs
+    console.log('this.blogs_content')
+    console.log(this.blogs_content)
+    console.log('this.blogs_content')
   }
 }
 </script>

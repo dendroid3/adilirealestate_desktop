@@ -4,11 +4,14 @@
     <title-strip :title="`My Properties`" :add_url ="`add_property`" :mini_tab="false" :click_url="`/account/properties`" />
     <div class="dashboard-section-wrapper">
       <property-card v-for="my_property in getMyProperties" :key="my_property.id" :property="my_property" />
-      <div v-if="!getMyProperties[0]"> 
-        <empty-here />
-        <p class="text-center text-grey">
-          {{"You have listed properties no units yet."}}
-        </p>
+      <div v-if="!getMyProperties[0]" class="d-flex justify-center"> 
+        <div>
+          <empty-here />
+          <p class="text-center text-grey">
+            {{"You have listed no properties yet. Click on the + icon to list some." }} <br>
+            {{" --- Some info on the benefits of listing with us --- "}}
+          </p>
+        </div>
       </div>
     </div>
     

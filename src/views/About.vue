@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about col-8 offset-2">
     <h1>ABOUT US</h1>
     <p>
       ProMIS is a smart cloud-based property management and advertising software, a product of ADHOME SOLUTIONS, a company established in 2022 dedicated to bridging the gaps in the housing sector by uniting all stakeholders, ensuring maximum benefits to all.

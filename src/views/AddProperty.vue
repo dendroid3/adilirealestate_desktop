@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="grey lighten-3 " style="height: 100%; margin-bottom: 5rem;">
+    <div class="grey lighten-3">
 
     <v-form ref="form" class="pa-4">
       <p style="font-size: 2.3rem;" v-if="getAddPropertyStep == 1"> add property</p>

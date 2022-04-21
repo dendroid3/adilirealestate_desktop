@@ -1,39 +1,65 @@
 <template>
   <v-app class="body">
+    <!-- <div class="d-flex justify-end blue white--text">
+      <v-icon class="mr-1 white--text">
+        mdi-phone
+      </v-icon>
+      087656789876
+      <v-icon class="ml-4 mr-1 white--text">
+        mdi-mail
+      </v-icon>
+      kjhgfghjk@lkiutghjk.clkjhg
+    </div> -->
     <v-app-bar
-      class="purple lighten-2"
-      app
-      dense
+      class="blue"
       color="white"
       dark
       flat
-    >
-      <div v-if="getUser.first_name">
+      app
+  >
+      <div>
         <v-img
-        class="white pa-2 my-h2 rounded"
-        :src="require(`./assets/logo.svg`)"
-        max-height="40"
-        @click="go('/dashboard')"
-        max-width="40"
+        class="blue pa-2 my-h2 rounded"
+        :src="require(`./assets/logo.png`)"
+        max-height="60"
+        @click="go('/')"
+        max-width="150"
         contain
-      ></v-img>
+        ></v-img>
       </div>
-
       <v-spacer></v-spacer>
-      <section v-if="!getUser.first_name">
-        <v-btn text small class="purple white--text mx-2"
-        @click="go('/login')">
-          Login
+      <section>
+        <div class="d-flex justify-end mb-1 rounded">
+          <div class="mr-1 px-2  rounded blue black--text lighten-4">
+            <v-icon small class="black--text">
+              mdi-phone
+            </v-icon> 072673362
+          </div> 
+          <div class="mr-1 px-2  rounded blue black--text lighten-4">
+            <v-icon small class="black--text">
+              mdi-mail
+            </v-icon> info@adilirealestate.co.ke
+          </div> 
+        </div>
+        <!-- <a href="#home"> -->
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
+          Home
         </v-btn>
-        <v-btn text small class="purple white--text mx-2"
-        @click="go('/register')">
-          Register
+        <!-- </a> -->
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
+          About
         </v-btn>
-      </section>
-      <section v-else>
-        <v-btn text small class="purple white--text mx-2"
-        @click="go('/dashboard')">
-          {{getUser.email}}
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('properties')">
+          Properties
+        </v-btn>
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
+          Blog
+        </v-btn>
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('faqs')">
+          FAQ
+        </v-btn>
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('contact')">
+          Contact Us
         </v-btn>
       </section>
     </v-app-bar>
@@ -41,48 +67,23 @@
     <v-main class="main">
       <alert-box />
       <v-row class="no-gutters">
-        <v-col class="col-1 grey lighten-2">
-          <left-bar></left-bar>
-          <!-- <home-navdrawer /> -->
-        </v-col> 
-        <v-col class="col-3 grey lighten-2">
-          
-          <v-row class="grey lighten-2 pt-4 no-gutters">
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`properties`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/properties`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`units`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/units`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold"> 
-              <dashboardTab :title="`vacancies`" :value="vacancies"  :click_url="`/account/vacancies`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`on sale`" :value="0" :click_url="`/account/onsale`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`bookings`" :value="(getMyProperties ? getMyProperties.length : 0)" :loading="fetching_my_properties" :click_url="`/account/bookings`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`land`" :value="(getMyUnits ? getMyUnits.length : 0 )" :loading="fetching_my_units" :click_url="`/account/land`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`enquiries`" :value="vacancies" :click_url="`/account/enquiries`"/>
-            </v-col>
-            <v-col class="col-3 px-1 mb-1 bold" > 
-              <dashboardTab :title="`logs`" :value="0" :click_url="`/account/logs`"/>
-            </v-col>
-          </v-row>
-          
-        <p style="font-size: 2.3rem;" class="backg--text"> Logs </p>
-          <log-card v-for="c in counter" :key="c"/>
-        </v-col>
-        <v-col  style="overflow: scroll; height: 100vh; margin-bottom:5rem;" > 
+        <v-col  style="overflow-y: scroll; overflow-x:hidden; height: 100vh; margin-bottom:5rem;" > 
           <router-view />
         </v-col>
       </v-row>
     </v-main>
     <info-box v-if="getInfoBoxDetails && getInfoBoxDetails.status"/>
+    <div style="position: fixed; bottom: 1rem; left: 1rem; z-index: 50;" class="">
+      <v-icon class="mx-1 white--text success pa-3 rounded">
+        mdi-whatsapp
+      </v-icon>
+      <v-icon class="mx-1 white--text success pa-3 rounded">
+        mdi-phone
+      </v-icon>
+      <v-icon class="mx-1 white--text success pa-3 rounded">
+        mdi-message
+      </v-icon>
+    </div>
   </v-app>
 </template>
 <script>
@@ -94,6 +95,7 @@ import alertBox from './components/widgets/alertBox.vue'
 import homeNavdrawer from './components/widgets/homeNavdrawer.vue'
 import LogCard from './components/logCard.vue';
 import dashboardTab from './components/dashboard/dashboardTab.vue';
+import propertyCard from './components/dashboard/propertyCard.vue'
 
 export default {
   name: 'App',
@@ -104,7 +106,8 @@ export default {
     homeNavdrawer,
     leftBar,
     LogCard,
-    dashboardTab
+    dashboardTab,
+    propertyCard
   },
 
   computed: {
@@ -128,11 +131,14 @@ export default {
         easing: 'easeInOutCubic',
       }
     },
+    route(){
+      return this.$router.history.current.path
+    }
   },
   data(){
     return{
-      fetching_my_properties: true,
-      fetching_my_units: true,
+      fetching_my_properties: false,
+      fetching_my_units: false,
       drawer: false,
       home_drawer: false,
       group: null,
@@ -170,6 +176,14 @@ export default {
     },
     toogle(){
       this.toogleFilter(true)
+    },
+    goToSection(element_id){
+      // console.log('going to section')
+      if((this.$router.history.current.path == '/') || (this.$router.history.current.path == '/home')){
+        document.getElementById(element_id).scrollIntoView({behavior: 'smooth', block: "center"})
+      } else {
+        this.go(element_id)
+      }
     },
     goDashboard(){
         this.go('dashboard')
@@ -215,14 +229,18 @@ export default {
 <style lang="css">
 
   html{
-      font-family: dosis;
+      /* font-family: dosis; */
+      width: 100vw;
+      font-family: 'EB Garamond', serif;
       /* width: 70vw; */
-      /* overflow: auto; */
+      overflow: auto;
   }
   #app{
       padding: 0;
       margin: 0;
-      font-family: dosis;
+      /* font-family: dosis; */
+      font-family: 'EB Garamond', serif;
+
   }
   .bold-1{
     font-weight: 900;
@@ -347,6 +365,9 @@ export default {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: purple;
+  background: red;
 } 
+a{
+  text-decoration: none;
+}
 </style>

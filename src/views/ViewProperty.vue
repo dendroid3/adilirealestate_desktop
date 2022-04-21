@@ -1,12 +1,16 @@
 <template lang="html">
   <div>
+    <div class="red justify-center align-center"
+      style="height: 100vh; width: 100vw;"
+      v-if="fetched"
+    >
     <v-progress-circular
-       v-if="!fetched"
       indeterminate
       :value="0"
-      size="40"
+      size="90"
       class="ml-2"
     ></v-progress-circular>
+    </div>
     <section v-if="fetched">
       <!-- {{getPropertyViewPage}} -->
       <div>
