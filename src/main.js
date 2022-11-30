@@ -5,20 +5,6 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 
-import VueCropper from 'vue-cropperjs';
-import 'cropperjs/dist/cropper.css';
-Vue.component(VueCropper);
-
-import VueGeoLocation from 'vue-browser-geolocation'
-Vue.use(VueGeoLocation)
-
-import * as VueGoogleMaps from 'vue2-google-maps'
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyB3Kv-kQ2RrmK6qoycuJS-L3F1-M7WJUUk'
-  }
-})
-
 Vue.config.productionTip = false;
 
 new Vue({
