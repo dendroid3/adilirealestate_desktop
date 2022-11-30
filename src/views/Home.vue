@@ -3,12 +3,6 @@
     <!-- <footer-strip /> -->
     <div id="home">
       <top-pics />
-      <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
-        Home
-      </v-btn>
-      <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
-        Blogs
-      </v-btn>
     </div>
     <div id="about">
       <about-card />
@@ -16,17 +10,106 @@
     <div id="properties">
       <properties-card />    
     </div>
+    <div class="d-flex justify-center mt-4 align-center" style="font-size: 2rem; color: red; z-index: 1;">
+      Why Invest With Us
+    </div>
+    <v-row class="no-gutters">
+      <v-col class="col-6 offset-3">
+        <v-col class="col-2">
+          <h3 class="blue--text d-flex align-center">
+            <v-icon class="blue rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Affordable
+          </h3>
+        </v-col>
+        <v-col class="col-12">
+          <v-img class="rounded lighten-4 my-1"
+          contain
+          :src="require(`../assets/saving.svg`)"
+          :aspect-ratio="5/2"
+          />
+          <p class="px-2">
+            Our prices are set at an optimum without a compromise on quality of service. What you see is what you get to pay, there are no hidden costs in acquiring the land. The quoted amount is all-inclusive
+          </p>
+        </v-col>
+        <v-col class="col-12">
+           <h3 class="blue--text d-flex align-center">
+            <v-icon class="blue rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Flexible Payments
+          </h3>
+        </v-col>
+        <v-col class="col-12">
+          <v-img class="img rounded lighten-4 my-1"
+            contain
+            :aspect-ratio="5/2"
+            :src="require(`../assets/payment.svg`)"
+            />
+          <p class="px-2">
+            Adili understands, we give the option of you to pay a deposit then pay the remaining amount in 9 months. These payments can be made through a channel of your preference. <br>
+            <span class="px-4">
+              <b>
+                Mpesa paybill
+              </b>
+            </span> <br>
+            <span class="px-4">
+              <b>
+                Bank Account
+              </b>
+            </span>
+          </p>
+        </v-col>
+        <v-col class="col-12">
+          <h3 class="blue--text d-flex align-center">
+            <v-icon class="blue rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Prime Selections
+          </h3>
+        </v-col>
+        <v-col class="col-12">
+          <v-img class="img rounded lighten-4 my-1"
+          :aspect-ratio="5/2"
+          contain
+          :src="require(`../assets/prime.svg`)"
+          />
+          <p class="px-2">
+            Adili has specialised in the rapidly developing south coas of Kenya. The team, through its experience has developed a prediction framework it uses to pick
+            out the plots with the most prospepects on return. The framework considers key parameter indicators such as <br>
+            <span class="px-4">
+              <b>
+                Nearby Amenities
+              </b>
+            </span> <br>
+            <span class="px-4">
+              <b>
+                Population and Economic trends of the environs
+              </b>
+            </span><br>
+            <span class="px-4">
+              <b>
+                Cost of purchase
+              </b>
+            </span>
+          </p>
+        </v-col>
+      </v-col>
+    </v-row>
+    <div class="px-2">
+    </div>
     <div id="blogs" ref="blogs">
       <blogs-section />
     </div>
-    <div id="faqs">
+    <!-- <div id="faqs">
       <faqs-section />
-    </div>
+    </div> -->
     <div id="contact" class="contact">
       <!-- Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum beatae modi incidunt iste id deserunt numquam molestias aliquam perspiciatis. In mollitia animi minima? Sit ducimus minus id eaque soluta. Ex quia quasi ad eveniet eaque placeat doloremque sunt vel quas, accusamus sint doloribus nostrum sed praesentium eius id ducimus iste consequatur, voluptatem eligendi molestias illo atque! Pariatur possimus dolore voluptatum quas molestiae et quisquam veniam atque ea mollitia aspernatur molestias fuga officiis aliquam sint facilis excepturi, libero culpa hic nemo omnis provident in temporibus. Sunt magni recusandae excepturi provident dolor. -->
       <contact-us />
     </div>
-    <div class="grey text-center" style="height: 10rem;">
+    <div class="grey text-center" style="height: 7rem;">
       (c) Adili Real Estate | 2022
     </div>
   </div>
@@ -96,18 +179,9 @@ export default {
     goToSection(element_id){
       console.log('going to section')
       document.getElementById(element_id).scrollIntoView({behavior: 'smooth', block: "end"})
-      // this.$vuetify.goTo(this.blogs_content, this.options)
     },
   },
   mounted(){
-    this.fetchVacancies().then((res) => {
-      this.goTop()
-    })
-    this.toogleWelcomeCard(true)
-    this.blogs_content = this.$refs.blogs
-    console.log('this.blogs_content')
-    console.log(this.blogs_content)
-    console.log('this.blogs_content')
   }
 }
 </script>

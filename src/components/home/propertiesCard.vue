@@ -1,13 +1,11 @@
 <template>
   <div>
-    <div class="d-flex justify-center mt-4" style="font-size: 2rem; color: red;">
-      Property Listings
+    <div class="d-flex justify-center mt-4 align-center" style="font-size: 2rem; color: red; z-index: 1;">
+      Available Properties 
     </div>
     <v-row class="no-gutters">  
-      <v-col class="col-3">
-      </v-col>
-      <v-col class="col-3" v-for="c in counter" :key="c">
-      <property-card />
+      <v-col class="col-6 offset-3">
+        <property-card />
       </v-col>
     </v-row>
   </div>
@@ -21,7 +19,12 @@
     },
     data(){
       return{
-        counter: 2
+        counter: 1
+      }
+    },
+    methods:{
+      viewAll(){
+        this.$router.push('/properties')
       }
     }
   }

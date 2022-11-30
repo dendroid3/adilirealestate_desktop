@@ -1,73 +1,202 @@
 <template>
   <div class="px-2 my-2 main_property"
-  style="z-index:902;  border-radius: 40px;"> 
-    <!-- <div class="red" style="height: 100vh; width: 100vw; position: fixed; top: 0;">
-      hello
-    </div> -->
-    <v-carousel
-    style="z-index: 1; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;"
-    class="pa-0 grey lighten-3"
-    :continuous="true"
-    :show-arrows="true"
-    hide-delimiter-background
-    delimiter-icon="mdi-minus"
-    height="270"
-    >
-      <v-carousel-item
-      ripple
-      class="pa-2 ma-0"
-      active-class="red--text"
-      v-for="c in counter"
-      :key="c">
-        <v-img class="img rounded lighten-4 ma-0"
-        contain
-        :aspect-ratio="1/1"
-        :src="require(`../../assets/land_1.jpg`)"
-        />
-      </v-carousel-item>
-    </v-carousel>
-    <v-row class="grey lighten-2 no-gutters" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+  style="z-index:1;  border-radius: 15px;"> 
+  <v-row class="grey lighten-2 no-gutters">
+    <v-col class="col-8">
+          <v-img class="img rounded lighten-4 ma-0"
+          v-if="img_source == 'real_land_0.jpeg'"
+          contain
+          :src="require(`../../assets/real_land_0.jpeg`)"
+          />
+          <v-img class="img rounded lighten-4 ma-0"
+          v-if="img_source == 'real_land.jpeg'"
+          contain
+          :src="require(`../../assets/real_land.jpeg`)"
+          />
+          <v-img class="img rounded lighten-4 ma-0"
+          v-if="img_source == 'real_land_2.jpeg'"
+          contain
+          :src="require(`../../assets/real_land_2.jpeg`)"
+          />
+          <v-img class="img rounded lighten-4 ma-0"
+          v-if="img_source == 'real_land_3.jpeg'"
+          contain
+          :src="require(`../../assets/real_land_3.jpeg`)"
+          />
+          <v-img class="img rounded lighten-4 ma-0"
+          v-if="img_source == 'real_land_4.jpeg'"
+          contain
+          :src="require(`../../assets/real_land_4.jpeg`)"
+          />
+          <v-col class="col-12 d-flex justify-center ">
+            <v-img class="rounded  mx-1"
+            :class="{
+              'red': img_source == 'real_land_0.jpeg'
+            }"
+            contain
+            :width="40"
+            :height="20"
+            @click="changeSource('real_land_0.jpeg')"
+            :src="require(`../../assets/real_land_0.jpeg`)"
+            />
+            <v-img class="rounded mx-1"
+            :class="{
+              'red': img_source == 'real_land.jpeg'
+            }"
+            @click="changeSource('real_land.jpeg')"
+            contain
+            :width="40"
+            :height="20"
+            :src="require(`../../assets/real_land.jpeg`)"
+            />
+            <v-img class="rounded mx-1"
+            :class="{
+              'red': img_source == 'real_land_2.jpeg'
+            }"
+            contain
+            @click="changeSource('real_land_2.jpeg')"
+            :width="40"
+            :height="20"
+            :src="require(`../../assets/real_land_2.jpeg`)"
+            />
+            <v-img class="rounded mx-1"
+            :class="{
+              'red': img_source == 'real_land_3.jpeg'
+            }"
+            contain
+            @click="changeSource('real_land_3.jpeg')"
+            :width="40"
+            :height="20"
+            :src="require(`../../assets/real_land_3.jpeg`)"
+            />
+            <v-img class="rounded mx-1"
+            :class="{
+              'red': img_source == 'real_land_4.jpeg'
+            }"
+            @click="changeSource('real_land_4.jpeg')"
+            contain
+            :width="40"
+            :height="20"
+            :src="require(`../../assets/real_land_4.jpeg`)"
+            />
+          </v-col>
+      <!-- <v-carousel
+      class="pa-0 grey lighten-2"
+      :continuous="true"
+      :show-arrows="true"
+      hide-delimiter-background
+      delimiter-icon="mdi-minus"
+      height="150"
+      >
       
-      <v-col class="col-12 d-flex justify-center pa-1 text--bold" style="font-weight: 900;" @click="go('view/property/' + vacancy.id)">
-        <h2>{{"property.name"}}</h2> 
-        <v-icon class="mx-1 green--text">
-          mdi-at
-        </v-icon>
-        <h2> {{"property.location"}} </h2>
+        <v-carousel-item
+        ripple
+        class="pt-2 d-flex align-center ma-0"
+        active-class="red--text">
+          <v-img class="img rounded lighten-4 ma-0"
+          contain
+          :height="800"
+          :src="require(`../../assets/real_land_0.jpeg`)"
+          />
+        </v-carousel-item>
+        <v-carousel-item
+        ripple
+        class="pt-2 d-flex align-center ma-0"
+        active-class="red--text">
+          <v-img class="img rounded lighten-4 ma-0"
+          contain
+          :height="800"
+          :src="require(`../../assets/real_land.jpeg`)"
+          />
+        </v-carousel-item>
+        <v-carousel-item
+        ripple
+        class="pt-2 d-flex align-center ma-0"
+        active-class="red--text">
+          <v-img class="img rounded lighten-4 ma-0"
+          contain
+          :height="800"
+          :src="require(`../../assets/real_land_2.jpeg`)"
+          />
+        </v-carousel-item>
+        <v-carousel-item
+        ripple
+        class="pt-2 d-flex align-center ma-0"
+        active-class="red--text">
+          <v-img class="img rounded lighten-4 ma-0"
+          contain
+          :height="800"
+          :src="require(`../../assets/real_land_3.jpeg`)"
+          />
+        </v-carousel-item>
+        <v-carousel-item
+        ripple
+        class="pt-2 d-flex align-center ma-0"
+        active-class="red--text">
+          <v-img class="img rounded lighten-4 ma-0"
+          contain
+          :height="800"
+          :src="require(`../../assets/real_land_4.jpeg`)"
+          />
+        </v-carousel-item>
+      </v-carousel> -->
+    </v-col>
+    <v-col class="col-4">
+      <v-col class="col-12 d-flex justify-center pa-1 text--bold" style="font-weight: 900;">
+        <h2>{{"Diani Crystal Gardens"}}</h2> 
       </v-col>
-      <v-col class="col-12 px-4 text--bold" style="font-weight: 900;" @click="go('view/unit/' + vacancy.id)">
-        <h5> {{"property.description"}} </h5>
-      </v-col>
       
-      
-      <v-col class="col-12 pa-4" style="font-weight: 900;">
-        
-      <span class="d-flex mr-2 white align-center rounded justify-center black--text" style="font-weight:900;">
-          <v-spacer />
-            <span>
-              {{"propertyy.type"}}
-            </span>
-          <v-spacer />
-          <span class="bold-2 mr-1  d-flex justify-end">
-            <v-icon x-small class="mx-1 green--text">
-              mdi-circle
-            </v-icon>
+      <v-col class="col-12 d-flex px-4">
+        <div>
+          <span class="d-flex mr-2 white align-center red rounded justimmfy-center black--text" style="font-weight:900;">
+            <v-spacer />
+              <span style="font-size: 1.5rem;" class="px-3">
+                {{"350,000"}}
+              </span>
+            <v-spacer />
           </span>
-          <v-spacer />
-        </span>
+        </div>
+      </v-col>
+      
+      <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
+        <h3 class="d-flex align-center mr-2"> 
+          <v-icon small class="red--text">
+            mdi-pin
+          </v-icon>
+          Diani
+        </h3>
+        <h5 class="d-flex"> 
+          <v-icon x-small class="green--text mx-1">
+            mdi-circle
+          </v-icon>
+          {{"400M off tamarc"}} 
+        </h5>
+        <h5 class="d-flex"> 
+          <v-icon x-small class="green--text mx-1">
+            mdi-circle
+          </v-icon>
+          {{"15Min drive from Ukunda Airstrip"}} 
+        </h5>
+        <h5 class="d-flex"> 
+          <v-icon x-small class="green--text mx-1">
+            mdi-circle
+          </v-icon>
+           {{"6KM off Diani White Sands"}} 
+        </h5>
       </v-col>
       <v-col class="col-6 offset-6 pa-1 d-flex justify-end" style="font-weight: 900;">
-        <v-btn x-small class="success ml-1" @click="go('book')">
+        <v-btn x-small class="blue white--text ml-1" @click="go('book')">
           book site visit
         </v-btn>
-        <v-btn x-small class="success ml-1" @click="go('enquire')">
+        <v-btn x-small class="blue white--text ml-1" @click="go('enquire')">
           enquire
         </v-btn>
-        <v-btn x-small class="success ml-1"  @click="go('property/id')">
+        <v-btn x-small class="blue white--text ml-1"  @click="go('property/diani-crystal-gardens')">
           view 
         </v-btn>
       </v-col>
-    </v-row>
+    </v-col>
+  </v-row>
   </div>
 </template>
 <script>
@@ -81,7 +210,8 @@ export default {
       counter: [1,2,3],
       shown: false,
       unit_types: [],
-      booking_form: false
+      booking_form: false,
+      img_source: "real_land_0.jpeg"
     }
   },
   methods:{
@@ -89,7 +219,10 @@ export default {
       this.shown = code
     },
     go(code){
-      this.$router.push('/' + code)
+      // this.$router.push()
+      let url = '/' + code
+      window.location = url
+
     },
     fixImageUrl(url){
       return process.env.VUE_APP_API + '/storage/' + url
@@ -99,6 +232,9 @@ export default {
     },
     toogleBookingForm(data){
       this.booking_form = data
+    },
+    changeSource(code){
+      this.img_source = code
     }
   },
   mounted(){

@@ -1,20 +1,14 @@
 <template lang="html">
-  <div>
+  <div style="margin-bottom: 10rem;">
     <div class="d-flex justify-center align-center animate__animated animate__zoomIn mt-4" style="font-size: 2rem; color: red;">
       FAQs
-      <v-btn x-small text class="blue--text" @click="viewAll">
-        view all
-      </v-btn>
-
     </div>
     <v-row class="no-gutters" v-for="(question, i) in faqs" :key="i">
-      <v-col class="col-8 offset-2">
-        <span style="font-size: 1.5rem; color: red;">
+      <v-col class="col-10 offset-1">
+        <span style="font-size: 1.5rem;" class="blue--text">
           {{question.question}}
         </span> <br>
-        <span class="ml-2" v-html="question.answer">
-          <!-- {{}} -->
-        </span>
+        <span class="ml-2" v-html="question.answer" />
       </v-col>
     </v-row>
   </div>
@@ -24,7 +18,7 @@ export default {
   name: 'faqsSection',
   data(){
     return{
-      faqs:[
+            faqs:[
         {
           question: 'When can I book a site visit?',
           answer: 'Our team is ready to take you for a site visit every Saturday and Sunday.  Contact us today to schedule your site visit or click on the book section.'
@@ -35,7 +29,7 @@ export default {
         },
         {
           question: 'What mode of payment do you accept?',
-          answer: 'We accept payment through: <br> <span class="ml-4"> a) Our MPESA Paybill No: ****Acc: Your two names.</span> <br> <span class="ml-4"> b) Back deposits to DTB Account No: **** Branch: Mombasa. <span>'
+          answer: 'We accept payment through: <br> <span class="ml-4"> a) Through <b> MPESA Paybill. </b> </span> <br> <span class="ml-4"> b) Through <b> Bank Deposits. </b> <span>'
         },
         {
           question: 'When can I book a site visit?',
@@ -59,15 +53,12 @@ export default {
         },
         {
           question: 'How can we contact you?',
-          answer: 'You can call or WhatsApp via our official number 0700000000 or write to us through adilipropertieske@gmail.com. We are also on <a target="blank" href="http://facebook.com/adiliRealEstateKe"> Facebook</a>, <a target="blank" href="http://twitter.com/adiliRealEstateKe"> Twitter</a> and <a target="blank" href="http://instagram.com/adiliRealEstateKe"> Instagram</a> '
+          answer: 'You can call or WhatsApp via our official number <a href="`tel: +254720244744`"> 0720244744 </a> or write to us through adilipropertieske@gmail.com. We are also on <a target="blank" href="https://www.facebook.com/AdiliRealEstate/"> Facebook</a>, <a target="blank" href="http://twitter.com/adiliRealEstateKe"> Twitter</a> and <a target="blank" href="http://instagram.com/adiliRealEstateKe"> Instagram</a> '
         }
       ]
     }
   },
   methods:{
-    viewAll(){
-      this.$router.push('/faqs')
-    }
   }
 
 }

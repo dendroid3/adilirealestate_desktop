@@ -1,94 +1,80 @@
 <template>
-  <div class="about col-8 offset-2">
-    <h1>ABOUT US</h1>
-    <p>
-      ProMIS is a smart cloud-based property management and advertising software, a product of ADHOME SOLUTIONS, a company established in 2022 dedicated to bridging the gaps in the housing sector by uniting all stakeholders, ensuring maximum benefits to all.
-      We provide property owners with our software to aid in managing their properties with various services such as; tenant screening, accounting, organization of tasks to be done, and online advertising of their room vacancies. We provide the house hunters with adverts of real-time housing vacancies.
-      ProMIS is tailored, so property owners have total control over the advertising and management of their properties.
-    </p>
-    <h1>MISSION</h1>
-    <p>
-      To bring unity to the housing sector, increase the efficiency of services, and maximize the benefits to our stakeholders.
-    </p>
-    <h1>VISION</h1>
-    <p>
-      To become the one-stop and ultimate solution to the problem in the housing sector.
-    </p>
-    <h1>FAQS</h1>
-    <h3>Who is ProMIS meant for?</h3>
-    <p>
-      ProMIS is a tool meant for the landlords, real estate agents and house hunters (person in search of a housing vacancy)
-    </p>
-    <h3>Why ProMIS for me as a property owner? </h3>
-    <p>
-      We provide you as a landlord or a real estate agent with the most efficient solution to your property management and room vacancy advertising needs while promising you total control over your property.
-    </p>
-    <p>
-      We help you;
-    </p>
-      <li>
-        Screen tenants before letting to them
-      </li><br>   
-      <li>
-        Provide you with a dedicated communication channel between you and your tenants,
-      </li><br>   
-      <li>
-        Allow you to schedule and get reminders on tasks to be completed later on your property,
-      </li><br>   
-      <li>
-        Provide an accounting tool for rent payments and automate rent payment reminders,
-      </li><br>     
-      <li>
-        Screen tenants before letting to them
-      </li><br>     
-
-    <h3>Why ProMIS for me as a house hunter? </h3>
-    <p>
-      We provide you as a house hunter with a wide variety of real time housing vacancies advertised directly by the landlords or the real estate agents on our vacancy advertising page.
-    </p>  
-    <li>
-      Get a view of and choose from a wide variety of available housing vacancies at your area of interest,
-    </li><br>    
-    <li>
-      Get directions and contacts to the landlord/real estate agent of the property you are interested in.
-    </li><br>    
-    <li>
-      Screen tenants before letting to them
-    </li><br>  
-    <h3>When will you start offering your services?  </h3>
-    <p>
-      To ensure customer satisfaction and a customer-oriented product, ProMIS is being dispensed in phases allowing us to first get your feedback about a feature and integrate it in the development of this feature before releasing the next feature.
-      <br>
-      We have started with the advertising feature which allows the landlord/property owner to declare a room vacant or occupied and the vacant room is automatically updated to our advertising page to be viewed by the house hunter.
-    </p>  
-    <h3>When can I the landlord/real estate agent get your services?</h3>
-    <p>
-      Join us now as a landlord or a real estate agent to be able to utilize our quality advertising services and also get a chance to get your feedback taken to help in the development of a tool that suits your needs.
-    </p>    
-    <h3>When can I the house hunter get your services?</h3>
-    <p>
-      You can visit our website now to view all the currently available vacancies.
-    </p>   
-    <h3>Which areas does ProMIS cover currently?</h3>
-    <p>
-      We are currently covering Nyeri town and areas around Dedan Kimathi university of technology and rapidly expanding to serve you from anywhere in the country
-    </p>  
-    <h3>How can I the Landlord/real estate agent get your services?</h3>
-    <p>
-      You can get our services by visiting our website, creating an account, listing your property and waiting for verification by one of our agents after which you will enjoy all our services
-    </p>  
-    <h3>How can I the House hunter get your services?</h3>
-    <p>
-      You can access our services by simply visiting our website and viewing all the available vacancies.
-    </p>  
-    <h3>How do you ensure I have total control over my property?</h3>
-    <p>
-      ProMIS is just a tool that is given to you to serve your needs and increase the efficiency of your services. You have absolute control over how you use our tool in the management of your property
-    </p>  
-    <h3>How do you screen tenants?</h3>
-    <p>
-      We have a centralized data base allowing for landlords/real estate agents to utilize the tenant information on reasons for moving out from the previous property ensuring tenants do not leave a property without clearance. 
-    </p>  
+  <div class="about col-12 px-2" style="padding-bottom: 5rem;">
+    <v-row class="no-gutters">
+      <v-col class="col-8 offset-2">
+        <h2 class="blue--text">ABOUT US</h2>
+        <p>
+        Adili Real Estate is a private limited company registered by the government of Kenya. We bring to you a variety of affordable and carefully chosen pieces of land in 
+        emerging markets with high potential for growth. This gives your acquired land guaranteed high appreciation rate. 
+        We are dedicated to walk with you. We are a team of highly qualified professionals with years of experience in the real estate sector.
+        </p>
+        <h2 class="blue--text">MISSION</h2>
+        <p>
+          To provide our customers with the best land opportunity in emerging markets for mutual benefits.
+        </p>
+        <h2 class="blue--text">VISION</h2>
+        <p>
+          To be the go-to channel for prime land scouting and acquisition. 
+        </p>
+        <h2 class="blue--text">CORE VALUES</h2>
+        <div class="px-2">
+          <h3 class="red--text d-flex align-center">
+            <v-icon class="red rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Accountability
+          </h3>
+          <p class="px-2">
+            We own up to our respobilities to our customers with zeal and clarity. We do not cut corners and strive keep our customers in the loop throughout our interaction with our customers.
+          </p>
+          <h3 class="red--text d-flex align-center">
+            <v-icon class="red rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Dedication
+          </h3>
+          <p class="px-2">
+            The process of acquiring land might be compliated and as such calls for dedication all through the whole process. It calls for utmost willpower and dedication to 
+            navigate the hurdles.
+            We are dedicated to deliver the best value and experience to our customers.
+          </p>
+          <h3 class="red--text d-flex align-center">
+            <v-icon class="red rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Integrity
+          </h3>
+          <p class="px-2">
+            Being a registered company, we operate within the confines of the Kenyan law as outlined by the Companies Act.
+            We ensure that that all our activities are not only legal but also moral, adhering to the African ethical values that call for integrity. 
+            Never will we ever compromise on our innate ethics to have an edge over the competition or to do malice to our customers.
+          </p>
+          
+          <h3 class="red--text d-flex align-center">
+            <v-icon class="red rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Loyalty
+          </h3>
+          <p class="px-2">
+            We cannot be in business without you, our customers, you are our lifeline, we therefore strive to be loyal to you and your vision and aspirations.
+            We understand that if you win, we all win and as such we put our customers above all other factors.
+          </p>
+          
+          <h3 class="red--text d-flex align-center">
+            <v-icon class="red rounded bold white--text mr-1" style="font-weigth: 800;">
+              mdi-check
+            </v-icon>
+            Innovation/Innovation 
+          </h3>
+          <p class="px-2">   
+            People have been acquiring land for the majority of recorded human history, however, much has changed in the acquision process since the days of conquering lands.
+            We strive to keep up with this change and constantly coming up with new innovative ways of identifying, acquiring and delivering promising lands.  
+            We are also working hard to invent new payment, visitation and booking models to ensure that we stay ahead of the curve in the industry.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>

@@ -62,9 +62,39 @@ const routes = [
     component: () => import('../views/Dashboard.vue')
   },
   {
-    path: '/account/properties',
-    name: 'MyProperties',
-    component: () => import('../views/MyProperties.vue')
+    path: '/properties',
+    name: 'Properties',
+    component: () => import('../views/properties/ViewAllProperties.vue')
+  },
+  // {
+  //   path: '/account/properties',
+  //   name: 'MyProperties',
+  //   component: () => import('../views/MyProperties.vue')
+  // },
+  {
+    path: '/blogs',
+    name: 'blogs',
+    component: () => import('../views/Blogs.vue')
+  },
+  {
+    path: '/blog/dongo-kundu-bypass',
+    name: 'dongoKunduBlog',
+    component: () => import('../views/dongoKunduBlog.vue')
+  },
+  {
+    path: '/blog/land-as-a-hedge-against-inflation',
+    name: 'LandAndInflationBlog',
+    component: () => import('../views/LandAndInflationBlog.vue')
+  },
+  {
+    path: '/faqs',
+    name: 'faqs',
+    component: () => import('../views/Faqs.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/Contact.vue')
   },
   {
     path: '/account/units',
@@ -84,7 +114,7 @@ const routes = [
   {
     path: '/property/:id',
     name: 'MyProperty',
-    component: () => import('../views/MyProperty.vue')
+    component: () => import('../views/properties/View.vue')
   },
   {
     path: '/add_property',
@@ -145,7 +175,12 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
+  {
+    path: '*',
+    name: 'AddLand',
+    component: () => import('../views/AddLand')
+  },
 ]
 
 const router = new VueRouter({

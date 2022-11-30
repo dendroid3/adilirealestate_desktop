@@ -1,5 +1,5 @@
 <template>
-  <v-app class="body">
+  <v-app class="body" style="padding-bottom: 5rem;">
     <!-- <div class="d-flex justify-end blue white--text">
       <v-icon class="mr-1 white--text">
         mdi-phone
@@ -19,7 +19,7 @@
   >
       <div>
         <v-img
-        class="blue pa-2 my-h2 rounded"
+        class="white pa-2 my-h2 rounded"
         :src="require(`./assets/logo.png`)"
         max-height="60"
         @click="go('/')"
@@ -28,17 +28,19 @@
         ></v-img>
       </div>
       <v-spacer></v-spacer>
-      <section>
+      <section v-if="!isMobile">
         <div class="d-flex justify-end mb-1 rounded">
-          <div class="mr-1 px-2  rounded blue black--text lighten-4">
-            <v-icon small class="black--text">
-              mdi-phone
-            </v-icon> 072673362
-          </div> 
+          <a :href="`tel: +254720244744`" style="text-decoration: none;"> 
+              <div class="mr-1 px-2  rounded blue black--text lighten-4">
+                <v-icon small class="black--text">
+                  mdi-phone
+                </v-icon> 0720244744
+              </div> 
+          </a>
           <div class="mr-1 px-2  rounded blue black--text lighten-4">
             <v-icon small class="black--text">
               mdi-mail
-            </v-icon> info@adilirealestate.co.ke
+            </v-icon> info@adilirealestate.com
           </div> 
         </div>
         <!-- <a href="#home"> -->
@@ -62,27 +64,59 @@
           Contact Us
         </v-btn>
       </section>
+      <section v-if="isMobile">
+        <v-icon>
+          mdi-menu
+        </v-icon>
+      </section>
+      <v-navigation-drawer
+      class="grey lighten-2"
+      v-model="home_drawer"
+      temporary
+      clipped 
+      right
+      fixed
+      width = '90%'
+        >
+        <div class="d-flex justify-end">
+          <div class="white pa-2 rounded" @click="home_drawer = false">
+          <v-icon class="red--text">
+            mdi-close
+          </v-icon>
+        </div>
+
+        </div>
+        <home-navdrawer />
+      </v-navigation-drawer>
+
     </v-app-bar>
 
     <v-main class="main">
+
       <alert-box />
       <v-row class="no-gutters">
         <v-col  style="overflow-y: scroll; overflow-x:hidden; height: 100vh; margin-bottom:5rem;" > 
+    <!-- <book /> -->
+
           <router-view />
         </v-col>
       </v-row>
     </v-main>
     <info-box v-if="getInfoBoxDetails && getInfoBoxDetails.status"/>
     <div style="position: fixed; bottom: 1rem; left: 1rem; z-index: 50;" class="">
-      <v-icon class="mx-1 white--text success pa-3 rounded">
+      <v-icon class="mx-1 white--text success pa-3 rounded" @click="goWhatsapp">
         mdi-whatsapp
       </v-icon>
-      <v-icon class="mx-1 white--text success pa-3 rounded">
-        mdi-phone
-      </v-icon>
-      <v-icon class="mx-1 white--text success pa-3 rounded">
-        mdi-message
-      </v-icon>
+      <a :href="`tel: +254720244744`" style="text-decoration: none;"> 
+        <v-icon class="mx-1 white--text success pa-3 rounded">
+          mdi-phone
+        </v-icon>
+      </a>
+      <a :href="`sms: 0720244744`" style="text-decoration: none;"> 
+        <v-icon class="mx-1 white--text success pa-3 rounded">
+          mdi-message
+        </v-icon>
+      </a>
     </div>
   </v-app>
 </template>
@@ -96,6 +130,7 @@ import homeNavdrawer from './components/widgets/homeNavdrawer.vue'
 import LogCard from './components/logCard.vue';
 import dashboardTab from './components/dashboard/dashboardTab.vue';
 import propertyCard from './components/dashboard/propertyCard.vue'
+import book from './views/book.vue';
 
 export default {
   name: 'App',
@@ -104,6 +139,7 @@ export default {
     infoBox,
     alertBox,
     homeNavdrawer,
+    book,
     leftBar,
     LogCard,
     dashboardTab,
@@ -133,6 +169,9 @@ export default {
     },
     route(){
       return this.$router.history.current.path
+    },
+    isMobile() {
+      return this.$vuetify.breakpoint.xsOnly;
     }
   },
   data(){
@@ -172,18 +211,17 @@ export default {
   methods:{
     ...mapActions(['toogleFilter','logout']),
     go(code){
-      this.$router.push(code)
+      window.location = code
     },
     toogle(){
       this.toogleFilter(true)
     },
+    goWhatsapp(){
+      let url = "https://wa.me/+254720244744?text=I'm%20interested%20in%20your%20land%20for%20sale"
+      window.open(url,'_blank')
+    },
     goToSection(element_id){
-      // console.log('going to section')
-      if((this.$router.history.current.path == '/') || (this.$router.history.current.path == '/home')){
-        document.getElementById(element_id).scrollIntoView({behavior: 'smooth', block: "center"})
-      } else {
-        this.go(element_id)
-      }
+      this.go('/' + element_id)
     },
     goDashboard(){
         this.go('dashboard')
@@ -215,6 +253,10 @@ export default {
 
     console.log(this.$router.history.current.path == '/dashboard')
     this.showNavBar = !(this.$router.history.current.path == '/dashboard')
+    if(this.isMobile){
+      let url = 'https://m.adilirealestate.com'
+      window.location = url
+    }
   },
   updated(){
     console.log(this.$router.history.current.path)
@@ -369,5 +411,8 @@ export default {
 } 
 a{
   text-decoration: none;
+}
+.secondary-color {
+  background-color: #231F20;
 }
 </style>

@@ -10,7 +10,7 @@ const actions = {
   async fetchMyProperties({commit}) {
     try{
       const response = await
-      axios.get('http://localhost:8000/api/get_my_units', {
+      axios.get('https://api.adilirealestate.com/api/get_my_units', {
         headers: {
           Authorization: Authorization
         }

@@ -1,8 +1,9 @@
 <template>
-  <div class="grey lighten-4">
+  <div class="grey lighten-4"  style="padding-bottom: 9rem;">
     <div class="d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;">
       Contact Us
     </div>
+    
     <v-row>
       <v-col class="col-2 d-flex justify-center">
         <v-row class="no-gutters">
@@ -41,7 +42,7 @@
         </v-row>
       </v-col>
       <v-col class="col-2">
-        <v-row class="no-gutters" @click="goWhatsapp">
+        <v-row class="no-gutters">
           <v-col class="col-12 d-flex justify-center">
             <v-icon class="mx-2 black--text">
               mdi-whatsapp
@@ -220,10 +221,10 @@
   </div>
 </template>
 <script>
- import { mapActions } from 'vuex'
- import axios from 'axios'
+  import axios from 'axios'
+  import { mapActions } from 'vuex'
   export default{
-    name: 'contatUs',
+    name: 'Contact',
     computed:{
       bookValid(){
         if(
