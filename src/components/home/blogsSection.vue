@@ -11,17 +11,22 @@
       <v-col class="col-6 offset-3">
         <inflationBlogCard />
       </v-col>
+      <v-col class="col-6 offset-3">
+        <landLocationCard />
+      </v-col>
     </v-row>
   </div>
 </template>
 <script>
   import blogCard from "./blogCard.vue"
   import inflationBlogCard from "./inflationBlogCard.vue";
+  import landLocationCard from "./landLocationCard.vue";
   export default{
     name: 'blogsSection',
     components:{
       blogCard,
-      inflationBlogCard
+      inflationBlogCard,
+      landLocationCard
     },
     methods:{
       viewAll(){

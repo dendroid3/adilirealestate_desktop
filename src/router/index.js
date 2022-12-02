@@ -87,6 +87,11 @@ const routes = [
     component: () => import('../views/LandAndInflationBlog.vue')
   },
   {
+    path: '/blog/why-land-location-matters',
+    name: 'landLocationBlog',
+    component: () => import('../views/landLocationBlog.vue')
+  },
+  {
     path: '/faqs',
     name: 'faqs',
     component: () => import('../views/Faqs.vue')

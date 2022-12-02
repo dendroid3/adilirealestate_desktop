@@ -31,37 +31,6 @@
         </v-col>
       </v-row>
       
-          
-          <!-- <v-row class="grey lighten-2 no-gutters">
-        
-        <v-col class="col-12 pa-4" style="font-weight: 900;">
-          
-        <span class="d-flex mr-2 white align-center rounded justify-center black--text" style="font-weight:900;">
-            <v-spacer />
-            <span class="bold-2 mkjr-1  d-flex justify-end">
-              <v-icon x-small class="mx-1 green--text">
-                mdi-clock
-              </v-icon>
-            </span>
-              <span>
-                {{"XT min"}}
-              </span>
-            <v-spacer />
-            <span class="bold-2 mkjr-1  d-flex justify-end">
-              <v-icon x-small class="mx-1 green--text">
-                mdi-eye
-              </v-icon>
-            </span>
-              <span>
-                {{"blog.views"}}
-              </span>
-            <v-spacer />
-          </span>
-        </v-col>
-        <v-col class="col-6 offset-6 pa-1 d-flex justify-end" style="font-weight: 900;">
-          
-        </v-col>
-      </v-row> -->
     </div>
   </template>
   <script>
