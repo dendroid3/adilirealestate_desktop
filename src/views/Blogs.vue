@@ -19,16 +19,22 @@
         <landLocationCard />
       </v-col>
     </v-row>
+    <v-row>
+      <v-col class="col-6 offset-3">
+        <redFlagCard />
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
 import blogCard from "../components/home/blogCard.vue"
 import inflationBlogCard from "../components/home/inflationBlogCard.vue";
 import landLocationCard from "../components/home/landLocationCard.vue";
+import redFlagCard from "../components/home/redFlagCard.vue";
   export default {
     name: 'Blogs',
     components:{
-      blogCard, inflationBlogCard, landLocationCard
+      blogCard, inflationBlogCard, landLocationCard, redFlagCard
     }
   }
 </script>

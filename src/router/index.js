@@ -66,11 +66,6 @@ const routes = [
     name: 'Properties',
     component: () => import('../views/properties/ViewAllProperties.vue')
   },
-  // {
-  //   path: '/account/properties',
-  //   name: 'MyProperties',
-  //   component: () => import('../views/MyProperties.vue')
-  // },
   {
     path: '/blogs',
     name: 'blogs',
@@ -90,6 +85,11 @@ const routes = [
     path: '/blog/why-land-location-matters',
     name: 'landLocationBlog',
     component: () => import('../views/landLocationBlog.vue')
+  },
+  {
+    path: '/blog/red-flags',
+    name: 'redFlagBlog',
+    component: () => import('../views/redFlagBlog.vue')
   },
   {
     path: '/faqs',

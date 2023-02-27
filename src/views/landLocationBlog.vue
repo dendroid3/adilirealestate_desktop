@@ -13,9 +13,9 @@
         This drives our discussion topic today: 
         <b><i>why is land location important? </i></b>
         <ul class="ml-4">
-            <li class="ml-4">Why is location important in deciding where to invest?</li>
-            <li class="ml-4">Factors that show ideal location for the land investment.</li>
-          </ul>
+          <li class="ml-4">Why is location important in deciding where to invest?</li>
+          <li class="ml-4">Factors that show ideal location for the land investment.</li>
+        </ul>
       </v-col>
       <v-col class="offset-2 col-8">
         <h3 class="blue--text mt-2">{{"Why Location is Vital"}}</h3>
