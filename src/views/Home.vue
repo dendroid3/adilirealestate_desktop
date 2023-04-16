@@ -106,7 +106,6 @@
       <faqs-section />
     </div> -->
     <div id="contact" class="contact">
-      <!-- Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum beatae modi incidunt iste id deserunt numquam molestias aliquam perspiciatis. In mollitia animi minima? Sit ducimus minus id eaque soluta. Ex quia quasi ad eveniet eaque placeat doloremque sunt vel quas, accusamus sint doloribus nostrum sed praesentium eius id ducimus iste consequatur, voluptatem eligendi molestias illo atque! Pariatur possimus dolore voluptatum quas molestiae et quisquam veniam atque ea mollitia aspernatur molestias fuga officiis aliquam sint facilis excepturi, libero culpa hic nemo omnis provident in temporibus. Sunt magni recusandae excepturi provident dolor. -->
       <contact-us />
     </div>
     <div class="grey text-center" style="height: 7rem;">

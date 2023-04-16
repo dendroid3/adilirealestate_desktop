@@ -92,6 +92,11 @@ const routes = [
     component: () => import('../views/redFlagBlog.vue')
   },
   {
+    path: '/blog/process-of-buying-land',
+    name: 'howtoBuy',
+    component: () => import('../views/howtoBuy.vue')
+  },
+  {
     path: '/faqs',
     name: 'faqs',
     component: () => import('../views/Faqs.vue')
