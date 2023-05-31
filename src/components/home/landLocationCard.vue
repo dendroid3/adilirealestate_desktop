@@ -1,43 +1,50 @@
-<template lang="html">
+<template>
     <div class="rounded main_blog">
-      <v-row class="no-gutters grey lighten-2 rounded pa-1">
-        <v-col class="col-8">
-          <v-col class="col-12 d-flex justify-center text--bold" style="font-weight: 900;">
-            <h2>{{"Land Location: Why Strategic Land Location Matters"}}</h2>
-          </v-col>
-          <v-col class="col-12 text--bold" style="font-weight: 900;">
-            <h5>
-                Land is homogeneous across large tracks; equally sized parcels of land should therefore, ideally, be worth the same, except they are not. 
-                Different plots of land may differ in their value despite being of the same size, fertility and climate. 
-                This difference is informed by several factors such as its size, proximity to amenities, underground natural resources but chiefly by its location. 
-                This is the reason why an acre in the leafy suburbs of Nairobi is several folds more expensive that an acre in, say, Mandera. 
-                Clichés get to be clichés since they have been deemed worth repeating having proven their truthfulness; thus, ‘location, location, location’ is as true as day. 
-                This drives our discussion topic today: 
-                <b><i>why is land location important? </i></b> 
-               <v-btn x-small class="success ml-1" @click="readMore">
-                read more 
-              </v-btn>
-            </h5>
-          </v-col>
-        </v-col>
-        <v-col class="col-4">
-          <v-img class="img rounded lighten-4 mr-1"
+      <v-card class="grey lighten-4">
+        <v-card-title class="d-flex justify-center text-center">
+          <p class="my-0" style="width: 100%;">
+            Land Location: 
+          </p> <br>
+          <p class="my-0">
+            Why Land Location Matters
+          </p>
+        </v-card-title>
+    
+        <v-img class="rounded"
           :src="require(`../../assets/location.jpg`)"
-          :aspect-ratio="1/1"
+          :aspect-ratio="2/1"
           contain
-          />
-          <div class="d-flex justify-end">
-            
-          </div>
-          
-        </v-col>
-      </v-row>
-      
+        />
+
+        <v-card-text>
+          {{ `
+          Land is homogeneous across large tracks; equally sized parcels of land should therefore, ideally, be worth the same, except they are not. 
+          Different plots of land may differ in their value despite being of the same size, fertility and climate. 
+          This difference is informed by several factors such as its size, proximity to amenities, underground natural resources but chiefly by its location. 
+          This is the reason why an acre in the leafy suburbs of Nairobi is several folds more expensive that an acre in, say, Mandera. 
+          Clichés get to be clichés since they have been deemed worth repeating having proven their truthfulness; thus, ‘location, location, location’ is as true as day. 
+          This drives our discussion topic today:
+          ` | sizeUp }}
+        </v-card-text>
+
+        <v-card-actions>
+          <v-btn small class="success" @click="readMore">
+            read more 
+          </v-btn>
+        </v-card-actions>
+      </v-card>
     </div>
   </template>
   <script>
   export default {
     name: 'landLocationCard',
+
+    filters: {
+      sizeUp(text){
+        return text.slice(0, 200) + '...'
+      }
+    },
+
     methods:{
       readMore(){
         let url = '/blog/why-land-location-matters'

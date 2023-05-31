@@ -27,29 +27,29 @@
           </v-carousel-item>
         </v-carousel> -->
         <v-img class="img rounded lighten-4 ma-0"
-          v-if="img_source == 'real_land_0.jpeg'"
+          v-if="img_source == 'real_land_0.png'"
           contain
-          :src="require(`../../assets/real_land_0.jpeg`)"
+          :src="require(`../../assets/real_land_0.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
-          v-if="img_source == 'real_land.jpeg'"
+          v-if="img_source == 'real_land_1.png'"
           contain
-          :src="require(`../../assets/real_land.jpeg`)"
+          :src="require(`../../assets/real_land_1.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
-          v-if="img_source == 'real_land_2.jpeg'"
+          v-if="img_source == 'real_land_2.png'"
           contain
-          :src="require(`../../assets/real_land_2.jpeg`)"
+          :src="require(`../../assets/real_land_2.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
-          v-if="img_source == 'real_land_3.jpeg'"
+          v-if="img_source == 'real_land_3.png'"
           contain
-          :src="require(`../../assets/real_land_3.jpeg`)"
+          :src="require(`../../assets/real_land_3.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
-          v-if="img_source == 'real_land_4.jpeg'"
+          v-if="img_source == 'real_land_4.png'"
           contain
-          :src="require(`../../assets/real_land_4.jpeg`)"
+          :src="require(`../../assets/real_land_4.png`)"
           />
         <div>
           <span class="d-flex white align-center red rounded justimmfy-center black--text" style="font-weight:900;">
@@ -73,53 +73,53 @@
       <v-col class="col-12 d-flex justify-center ">
             <v-img class="rounded  mx-1"
             :class="{
-              'red': img_source == 'real_land_0.jpeg'
+              'red': img_source == 'real_land_0.png'
             }"
             contain
             :width="40"
             :height="20"
-            @click="changeSource('real_land_0.jpeg')"
-            :src="require(`../../assets/real_land_0.jpeg`)"
+            @click="changeSource('real_land_0.png')"
+            :src="require(`../../assets/real_land_0.png`)"
             />
             <v-img class="rounded mx-1"
             :class="{
-              'red': img_source == 'real_land.jpeg'
+              'red': img_source == 'real_land_1.png'
             }"
-            @click="changeSource('real_land.jpeg')"
+            @click="changeSource('real_land_1.png')"
             contain
             :width="40"
             :height="20"
-            :src="require(`../../assets/real_land.jpeg`)"
+            :src="require(`../../assets/real_land_1.png`)"
             />
             <v-img class="rounded mx-1"
             :class="{
-              'red': img_source == 'real_land_2.jpeg'
+              'red': img_source == 'real_land_2.png'
             }"
             contain
-            @click="changeSource('real_land_2.jpeg')"
+            @click="changeSource('real_land_2.png')"
             :width="40"
             :height="20"
-            :src="require(`../../assets/real_land_2.jpeg`)"
+            :src="require(`../../assets/real_land_2.png`)"
             />
             <v-img class="rounded mx-1"
             :class="{
-              'red': img_source == 'real_land_3.jpeg'
+              'red': img_source == 'real_land_3.png'
             }"
             contain
-            @click="changeSource('real_land_3.jpeg')"
+            @click="changeSource('real_land_3.png')"
             :width="40"
             :height="20"
-            :src="require(`../../assets/real_land_3.jpeg`)"
+            :src="require(`../../assets/real_land_3.png`)"
             />
             <v-img class="rounded mx-1"
             :class="{
-              'red': img_source == 'real_land_4.jpeg'
+              'red': img_source == 'real_land_4.png'
             }"
-            @click="changeSource('real_land_4.jpeg')"
+            @click="changeSource('real_land_4.png')"
             contain
             :width="40"
             :height="20"
-            :src="require(`../../assets/real_land_4.jpeg`)"
+            :src="require(`../../assets/real_land_4.png`)"
             />
           </v-col>
       <!-- <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
@@ -484,7 +484,7 @@ export default {
       },
       book_data: {},
       book_loading: false,
-      img_source: "real_land_0.jpeg",
+      img_source: "real_land_0.png",
       counter: [1,2,3],
       enquire: true,
       enquire_loading: false,

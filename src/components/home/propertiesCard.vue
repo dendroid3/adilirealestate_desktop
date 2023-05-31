@@ -3,19 +3,24 @@
     <div class="d-flex justify-center mt-4 align-center" style="font-size: 2rem; color: red; z-index: 1;">
       Available Properties 
     </div>
-    <v-row class="no-gutters">  
-      <v-col class="col-6 offset-3">
-        <property-card />
+    <v-row>  
+      <v-col class="col-4 offset-2">
+        <diani-crystal />
+      </v-col>
+      <v-col class="col-4">
+        <diani-crystal />
       </v-col>
     </v-row>
   </div>
 </template>
 <script>
   import propertyCard from "./propertyCard.vue"
+  import dianiCrystal from "../properties/dianiCrystal.vue"
   export default{
     name: 'propertiesCard',
     components:{
-      propertyCard
+      propertyCard,
+      dianiCrystal
     },
     data(){
       return{

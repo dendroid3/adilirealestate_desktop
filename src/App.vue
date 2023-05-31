@@ -1,34 +1,7 @@
 <template>
   <v-app class="body" style="padding-bottom: 5rem;">
-    <!-- <div class="d-flex justify-end blue white--text">
-      <v-icon class="mr-1 white--text">
-        mdi-phone
-      </v-icon>
-      087656789876
-      <v-icon class="ml-4 mr-1 white--text">
-        mdi-mail
-      </v-icon>
-      kjhgfghjk@lkiutghjk.clkjhg
-    </div> -->
-    <v-app-bar
-      class="blue"
-      color="white"
-      dark
-      flat
-      app
-  >
-      <div>
-        <v-img
-        class="white pa-2 my-h2 rounded"
-        :src="require(`./assets/logo.png`)"
-        max-height="60"
-        @click="go('/')"
-        max-width="150"
-        contain
-        ></v-img>
-      </div>
-      <v-spacer></v-spacer>
-      <section v-if="!isMobile">
+    <div class="row no-gutters">
+      <div class="col-12 blue justify-end d-flex px-4 py-1">
         <div class="d-flex justify-end mb-1 rounded">
           <a :href="`tel: +254720244744`" style="text-decoration: none;"> 
               <div class="mr-1 px-2  rounded blue black--text lighten-4">
@@ -43,13 +16,34 @@
             </v-icon> info@adilirealestate.com
           </div> 
         </div>
-        <!-- <a href="#home"> -->
+      </div>
+    </div>
+    <v-app-bar
+      style="
+        z-index: 920;
+        margin-top: 2rem;
+        border-bottom: solid #2196F3 1px;
+        background-color: white;
+      "  
+      class="app-bar"
+      dark
+      flat
+      app
+  >
+      <div>
+        <v-img
+        class="white pa-2 my-h2 rounded pointer"
+        :src="require(`./assets/logo.png`)"
+        max-height="60"
+        @click="go('/')"
+        max-width="150"
+        contain
+        ></v-img>
+      </div>
+      <v-spacer></v-spacer>
+      <section class="d-flex align-end" style="height: 100%;">
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
           Home
-        </v-btn>
-        <!-- </a> -->
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
-          About
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('properties')">
           Properties
@@ -60,48 +54,23 @@
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('faqs')">
           FAQ
         </v-btn>
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
+          About
+        </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('contact')">
           Contact Us
         </v-btn>
       </section>
-      <section v-if="isMobile">
-        <v-icon>
-          mdi-menu
-        </v-icon>
-      </section>
-      <v-navigation-drawer
-      class="grey lighten-2"
-      v-model="home_drawer"
-      temporary
-      clipped 
-      right
-      fixed
-      width = '90%'
-        >
-        <div class="d-flex justify-end">
-          <div class="white pa-2 rounded" @click="home_drawer = false">
-          <v-icon class="red--text">
-            mdi-close
-          </v-icon>
-        </div>
-
-        </div>
-        <home-navdrawer />
-      </v-navigation-drawer>
-
     </v-app-bar>
+    
+    <v-main class="main"  style="overflow-y: auto; overflow-x:hidden; height: 100vh; margin-bottom:5rem;" >
+      <router-view />
 
-    <v-main class="main">
+      <footer-strip />
 
       <alert-box />
-      <v-row class="no-gutters">
-        <v-col  style="overflow-y: scroll; overflow-x:hidden; height: 100vh; margin-bottom:5rem;" > 
-    <!-- <book /> -->
-
-          <router-view />
-        </v-col>
-      </v-row>
     </v-main>
+
     <info-box v-if="getInfoBoxDetails && getInfoBoxDetails.status"/>
     <div style="position: fixed; bottom: 1rem; left: 1rem; z-index: 50;" class="">
       <v-icon class="mx-1 white--text success pa-3 rounded" @click="goWhatsapp">
@@ -118,6 +87,7 @@
         </v-icon>
       </a>
     </div>
+
   </v-app>
 </template>
 <script>
@@ -131,11 +101,13 @@ import LogCard from './components/logCard.vue';
 import dashboardTab from './components/dashboard/dashboardTab.vue';
 import propertyCard from './components/dashboard/propertyCard.vue'
 import book from './views/book.vue';
+import footerStrip from './components/home/footerStrip.vue';
 
 export default {
   name: 'App',
 
   components:{
+    footerStrip,
     infoBox,
     alertBox,
     homeNavdrawer,
@@ -280,9 +252,8 @@ export default {
   #app{
       padding: 0;
       margin: 0;
-      /* font-family: dosis; */
-      font-family: 'EB Garamond', serif;
-
+      font-family: 'Lato', sans-serif;
+      font-family: 'Montserrat', sans-serif;
   }
   .bold-1{
     font-weight: 900;
@@ -293,7 +264,6 @@ export default {
     height: 100vh;
     pointer-events: auto;
   }
-  
   .bold-2{
     font-weight: 900;
   }
@@ -308,9 +278,6 @@ export default {
     text-justify: center;
     justify-content: center;
     justify-items: center;
-  }
-  .app-bar{
-    z-index: 920;
   }
   .bold{
     font-weight: 800;
@@ -389,7 +356,8 @@ export default {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
+  height: 0px;
   direction:rtl;
 }
 

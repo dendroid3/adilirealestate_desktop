@@ -1,34 +1,28 @@
-<template lang="html">
+<template>
   <div style="margin-bottom: 5rem;">
     <div class="d-flex align-center justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;" v-observe-visibility="visibilityChanged">
       Blogs and Tips
     </div>
     
-    <v-row>
-      <v-col class="col-6 offset-3">
-        <blog-card />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="col-6 offset-3">
+    <v-row class="pa-4 mx-4">
+      <v-col class="col-4">
         <inflationBlogCard />
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="col-6 offset-3">
-        <landLocationCard />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="col-6 offset-3">
-        <redFlagCard />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="col-6 offset-3">
+      <v-col class="col-4">
         <howtobuyCard />
       </v-col>
+      <v-col class="col-4">
+        <landLocationCard />
+      </v-col>
+      <v-col class="col-4">
+        <redFlagCard />
+      </v-col>
+      <v-col class="col-4">
+        <blog-card />
+      </v-col>
+      
     </v-row>
+    
   </div>
 </template>
 <script>

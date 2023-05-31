@@ -1,5 +1,5 @@
 <template>
-  <div class="grey lighten-4">
+  <div class="gr">
     <div class="d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;">
       Contact Us
     </div>
@@ -110,7 +110,7 @@
       </v-col>
     </v-row>
     <v-row class="no-gutters mb-3">
-      <v-col class="col-6 d-flex justify-center" style="border-right: solid 3px white;">
+      <v-col class="col-3 offset-2 d-flex justify-center" style="border-right: solid 3px white;">
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
@@ -163,7 +163,7 @@
           </div>
         </v-form>
       </v-col>
-      <v-col class="col-6 d-flex justify-center">
+      <v-col class="col-3 offset-2 d-flex justify-center">
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
