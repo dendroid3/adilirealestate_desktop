@@ -122,7 +122,7 @@
                 <v-col class="col-5 offset-1">
                     <span class="d-flex mr-2 cta tex-center d-flex justify-center align-center red rounded white--text" style="font-weight:900;">
                         <span class="body-text px-3">
-                            {{"350,000"}}
+                            {{"549,000"}}
                         </span>
                     </span>
                 </v-col>
