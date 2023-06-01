@@ -1,14 +1,14 @@
 <template>
   <div>
-    <v-row class="blue mt-2" style="width: 80vw; margin-left: 10vw; line-height: 1px; position: absolute;">.</v-row>    
+    <v-row class="blue mt-4 mb-4" style="width: 80vw; margin-left: 10vw; line-height: 1px; position: absolute;">.</v-row>    
     <div style="padding-bottom: 5rem;" class="blue footer-wrapper mt-4">
-      <v-row class="white">
+      <v-row class="white mt-4 pt-4">
         <v-col class="col-6 offset-3 d-flex justify-center">
           <div>
-            <h3 class="text-center">
+            <h3 class="text-center sub-heading">
               SUBSCRIBE TO OUR NEWSLETTER
             </h3>
-            <p>Submit your email to get updates on our latest properties for sale</p>
+            <p class="text-center body-text">Submit your email to get updates on our latest properties for sale</p>
             <div class="white rounded pa-4 d-flex" style="width: 100%;">
               <v-text-field
               small
@@ -33,7 +33,7 @@
         <v-col class="col-3 d-flex justify-center footer-block">
           <div>
             <h3 class="text-center">About Us</h3>
-            <v-row class="mt-2 mb-4 pa-4">
+            <v-row class="mt-4 mb-4 pa-4">
               <p>
                 Adili Real Estate is a private limited company registered by the government of Kenya. We bring to you a variety of affordable and carefully chosen pieces of land in 
                 emerging markets with high potential for growth. This gives your acquired land guaranteed high appreciation rate. 

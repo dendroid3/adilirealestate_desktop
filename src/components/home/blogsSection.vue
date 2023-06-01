@@ -1,6 +1,6 @@
 <template>
   <div class="mb-2">
-    <div class="d-flex align-center justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;">
+    <div class="d-flex align-center justify-center animate__animated animate__zoomIn heading blue--text">
       Blogs and Tips
     </div>
     <v-row class="pa-4 d-flex">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex justify-center mt-4 align-center" style="font-size: 2rem; color: red; z-index: 1;">
+    <div class="d-flex justify-center mt-4 align-center heading blue--text" style="z-index: 1;">
       Available Properties 
     </div>
     <v-row>  
@@ -8,7 +8,7 @@
         <diani-crystal />
       </v-col>
       <v-col class="col-4">
-        <diani-crystal />
+        <diani-sunrise />
       </v-col>
     </v-row>
   </div>
@@ -16,11 +16,14 @@
 <script>
   import propertyCard from "./propertyCard.vue"
   import dianiCrystal from "../properties/dianiCrystal.vue"
+  import dianiSunrise from "../properties/dianiSunrise.vue"
+
   export default{
     name: 'propertiesCard',
     components:{
       propertyCard,
-      dianiCrystal
+      dianiCrystal,
+      dianiSunrise
     },
     data(){
       return{

@@ -3,87 +3,87 @@
     <v-card class="grey lighten-4">
         <v-card-title class="d-flex justify-center text-center">
             <p class="my-0 sub-heading"  style="width: 100%;">
-                Diani Crystal Gardens
+                Diani Sunrise Estate
             </p>
         </v-card-title>
         <v-row>
             <v-col class="col-12 pa-2">
                 <v-img class="img rounded lighten-4 ma-4"
-                v-if="img_source == 'real_land_0.png'"
+                v-if="img_source == 'sunrise_0.png'"
                 contain
-                :src="require(`../../assets/real_land_0.png`)"
+                :src="require(`../../assets/sunrise_0.png`)"
                 />
                 <v-img class="img rounded lighten-4 ma-4"
-                v-if="img_source == 'real_land_1.png'"
+                v-if="img_source == 'sunrise_1.png'"
                 contain
-                :src="require(`../../assets/real_land_1.png`)"
+                :src="require(`../../assets/sunrise_1.png`)"
                 />
                 <v-img class="img rounded lighten-4 ma-4"
-                v-if="img_source == 'real_land_2.png'"
+                v-if="img_source == 'sunrise_2.png'"
                 contain
-                :src="require(`../../assets/real_land_2.png`)"
+                :src="require(`../../assets/sunrise_2.png`)"
                 />
                 <v-img class="img rounded lighten-4 ma-4"
-                v-if="img_source == 'real_land_3.png'"
+                v-if="img_source == 'sunrise_3.png'"
                 contain
-                :src="require(`../../assets/real_land_3.png`)"
+                :src="require(`../../assets/sunrise_3.png`)"
                 />
                 <v-img class="img rounded lighten-4 ma-4"
-                v-if="img_source == 'real_land_4.png'"
+                v-if="img_source == 'sunrise_4.png'"
                 contain
-                :src="require(`../../assets/real_land_4.png`)"
+                :src="require(`../../assets/sunrise_4.png`)"
                 />
             </v-col>
             <v-col class="col-12 d-flex justify-center ">
                 <v-img class="rounded mx-1"
                 :class="{
-                'red': img_source == 'real_land_0.png'
+                'red': img_source == 'sunrise_0.png'
                 }"
                 contain
                 :width="30"
                 :height="20"
-                @click="changeSource('real_land_0')"
-                :src="require(`../../assets/real_land_0.png`)"
+                @click="changeSource('sunrise_0')"
+                :src="require(`../../assets/sunrise_0.png`)"
                 />
                 <v-img class="rounded mx-1"
                 :class="{
-                'red': img_source == 'real_land_1.png'
+                'red': img_source == 'sunrise_1.png'
                 }"
-                @click="changeSource('real_land_1')"
+                @click="changeSource('sunrise_1')"
                 contain
                 :width="30"
                 :height="20"
-                :src="require(`../../assets/real_land_1.png`)"
+                :src="require(`../../assets/sunrise_1.png`)"
                 />
                 <v-img class="rounded mx-1"
                 :class="{
-                'red': img_source == 'real_land_2.png'
+                'red': img_source == 'sunrise_2.png'
                 }"
                 contain
-                @click="changeSource('real_land_2')"
+                @click="changeSource('sunrise_2')"
                 :width="30"
                 :height="20"
-                :src="require(`../../assets/real_land_2.png`)"
+                :src="require(`../../assets/sunrise_2.png`)"
                 />
                 <v-img class="rounded mx-1"
                 :class="{
-                'red': img_source == 'real_land_3.png'
+                'red': img_source == 'sunrise_3.png'
                 }"
                 contain
-                @click="changeSource('real_land_3')"
+                @click="changeSource('sunrise_3')"
                 :width="30"
                 :height="20"
-                :src="require(`../../assets/real_land_3.png`)"
+                :src="require(`../../assets/sunrise_3.png`)"
                 />
                 <v-img class="rounded mx-1"
                 :class="{
-                'red': img_source == 'real_land_4.png'
+                'red': img_source == 'sunrise_4.png'
                 }"
-                @click="changeSource('real_land_4')"
+                @click="changeSource('sunrise_4')"
                 contain
                 :width="30"
                 :height="20"
-                :src="require(`../../assets/real_land_4.png`)"
+                :src="require(`../../assets/sunrise_4.png`)"
                 />
             </v-col>
             <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
@@ -141,11 +141,11 @@
 </template>
 <script>
 export default {
-    name: 'dianiCrystal',
+    name: 'dianiSunrise',
 
     data: () => {
         return {
-            img_source: "real_land_0.png",
+            img_source: "sunrise_0.png",
             counter: 0
         }
     },
@@ -166,7 +166,7 @@ export default {
                 } else {
                     this.counter = 0
                 }
-                let image_name = 'real_land_' + this.counter
+                let image_name = 'sunrise_' + this.counter
                 this.changeSource(image_name, true)
             }, 2000);
         },

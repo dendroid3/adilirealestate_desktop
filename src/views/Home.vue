@@ -4,45 +4,56 @@
     <div id="home">
       <top-pics />
     </div>
+
     <div id="about">
       <about-card />
     </div>
-    <div id="properties">
+
+    <div id="properties" class="mt-4 mb-4 pb-4">
       <properties-card />    
     </div>
-    <div class="d-flex justify-center mt-4 align-center" style="font-size: 2rem; color: red; z-index: 1;">
-      Why Invest With Us
-    </div>
-    <v-row class="pa-4">
-      <v-col class="col-4">
-        <whyInvestCard 
-        :title="`Affordable`" 
-        :text="`Our prices are set at an optimum without a compromise on quality of service. 
-            What you see is what you get to pay, there are no hidden costs in acquiring the land. The quoted amount is all-inclusive.`"
-        />
-      </v-col>
-      <v-col class="col-4">
-        <whyInvestCard 
-        :title="`Flexible Payments`" 
-        :text="`Adili understands, we give the option of you to pay a deposit then pay the remaining amount in 9 months. 
-            These payments can be made through a channel of your preference`"
-        />
-      </v-col>
-      <v-col class="col-4">
-        <whyInvestCard 
-        :title="`Prime Selections`" 
-        :text="`Adili has specialised in the rapidly developing south coas of Kenya. 
-        The team, through its experience has developed a prediction framework it uses to pick out the plots with the most prospepects on return.`"
-        />
-      </v-col>
-    </v-row>
-    <div id="blogs" ref="blogs">
+    
+    <div id="blogs" ref="blogs" class="pt-4">
       <blogs-section />
     </div>
-    <!-- <div id="faqs">
+
+    <div class="d-flex justify-center mt-4 pt-4 align-center heading blue--text" style="z-index: 1;">
+      Why Invest With Us
+    </div>
+    <v-row class="pa-4 mb-4">
+      <v-col class="col-1"></v-col>
+      <v-col class="col-10">
+        <v-row>
+          <v-col class="col-4">
+            <whyInvestCard 
+            :title="`Affordable`" 
+            :text="`Our prices are set at an optimum without a compromise on quality of service. 
+                What you see is what you get to pay, there are no hidden costs in acquiring the land. The quoted amount is all-inclusive.`"
+            />
+          </v-col>
+          <v-col class="col-4">
+            <whyInvestCard 
+            :title="`Flexible Payments`" 
+            :text="`Adili understands, we give the option of you to pay a deposit then pay the remaining amount in 9 months. 
+                These payments can be made through a channel of your preference`"
+            />
+          </v-col>
+          <v-col class="col-4">
+            <whyInvestCard 
+            :title="`Prime Selections`" 
+            :text="`Adili has specialised in the rapidly developing south coas of Kenya. 
+            The team, through its experience has developed a prediction framework it uses to pick out the plots with the most prospepects on return.`"
+            />
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col class="col-1"></v-col>
+    </v-row>
+    <div id="faqs">
       <faqs-section />
-    </div> -->
-    <div id="contact" class="contact">
+    </div>
+    
+    <div id="contact" class="contact pt-4">
       <contact-us />
     </div>
   </div>

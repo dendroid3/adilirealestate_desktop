@@ -1,11 +1,13 @@
 <template>
     <div>
         <v-card class="grey lighten-4">
-            <v-card-title class="blue--text d-flex align-center">
+            <v-card-title class="blue--text d-flex align-center ">
                 <v-icon class="blue rounded bold white--text mr-1" style="font-weigth: 800;">
                     mdi-check
                 </v-icon>
-                {{title}}
+                <span class="sub-heading">
+                    {{title}}
+                </span>
             </v-card-title>
             <v-img class="rounded lighten-4"
             v-if="title == `Affordable`"

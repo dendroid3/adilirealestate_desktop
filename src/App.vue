@@ -252,12 +252,27 @@ export default {
   #app{
       padding: 0;
       margin: 0;
-      font-family: 'Lato', sans-serif;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Poppins', sans-serif;
   }
+
+  .heading{
+    font-size: 36px;
+  }
+
+  .sub-heading{
+    font-size: 24px;
+  }
+
+  .body-text{
+    font-size: 16px;
+  }
+
+  .caption{
+    font-size: 11px;
+  }
+
   .bold-1{
     font-weight: 900;
-    font-size: 1.1rem;
   }
   body{
     overflow-y: hidden;
@@ -268,6 +283,10 @@ export default {
     font-weight: 900;
   }
   
+  .cta{
+    background: #ec2027;
+  }
+
   .main{
     overflow-x: hidden;
     margin: 0;
@@ -281,7 +300,6 @@ export default {
   }
   .bold{
     font-weight: 800;
-    font-size: 1rem;
   }
 
   .backg{

@@ -1,6 +1,6 @@
 <template>
   <div class="gr">
-    <div class="d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;">
+    <div class="d-flex justify-center animate__animated animate__zoomIn heading blue--text">
       Contact Us
     </div>
     <v-row>

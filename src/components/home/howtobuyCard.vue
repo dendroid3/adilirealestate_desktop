@@ -2,7 +2,7 @@
     <div class="rounded main_blog">
       <v-card class="grey lighten-4">
         <v-card-title class="d-flex justify-center text-center">
-          <p class="my-0" style="width: 100%;">
+          <p class="my-0 sub-heading" style="width: 100%;">
             Land Processes: 
           </p> <br>
           <p class="my-0">
@@ -17,12 +17,14 @@
         />
 
         <v-card-text>
-          {{ `
-            A few malicious land-selling enterprises have painted the buying process to be confusing. 
-            However, the confusion is a deliberate tactic, “if you cannot convince them, confuse them.” 
-            The process of buying land need not be rocket science, and if it seems so, then it should be a red flag, other red flags here. 
-            Here are the ten steps to get you to the 'land owner' status.
-          ` | sizeUp }}
+          <span class="body-text">
+            {{ `
+              A few malicious land-selling enterprises have painted the buying process to be confusing. 
+              However, the confusion is a deliberate tactic, “if you cannot convince them, confuse them.” 
+              The process of buying land need not be rocket science, and if it seems so, then it should be a red flag, other red flags here. 
+              Here are the ten steps to get you to the 'land owner' status.
+            ` | sizeUp }}
+          </span>
         </v-card-text>
 
         <v-card-actions>
