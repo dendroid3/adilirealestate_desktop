@@ -120,14 +120,14 @@
             </v-col>
             <v-col class="col-12 d-flex px-4">
                 <v-col class="col-5 offset-1">
-                    <span class="d-flex mr-2 cta tex-center d-flex justify-center align-center red rounded white--text" style="font-weight:900;">
+                    <span class="d-flex mr-2 cta tex-center d-flex justify-center align-center red rounded white--text">
                         <span class="body-text px-3">
                             {{"350,000"}}
                         </span>
                     </span>
                 </v-col>
                 <v-col class="col-5 offset-1">
-                    <span class="d-flex mr-2 pointer cta tex-center d-flex justify-center align-center red rounded white--text" style="font-weight:900;" @click="go('property/diani-crystal-gardens')">
+                    <span class="d-flex mr-2 pointer cta tex-center d-flex justify-center align-center red rounded white--text" @click="go('property/diani-crystal-gardens')">
                         <span class="body-text px-3">
                             {{"View"}}
                         </span>
