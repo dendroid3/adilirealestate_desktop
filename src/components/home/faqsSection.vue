@@ -2,10 +2,15 @@
   <div>
     <div class="d-flex justify-center heading blue--text align-center animate__animated animate__zoomIn mt-4">
       FAQs
-    </div>
-    <v-row class="no-gutters" v-for="(question, i) in faqs" :key="i">
-      <v-col class="col-8 offset-2">
-        <p class="sub-heading pointer mb-0" @click="selectQuestion(i)" v-html="question.question">
+    </div>  
+    <v-row class="no-gutters pa-0 rounded" v-for="(question, i) in faqs" :key="i">
+      <v-col class="col-8 rounded offset-2 pb-0" :class="{
+        'blue lighten-4': (i == selected),
+        }">
+        <p class="sub-heading pointer mb-0 pl-2" :class="{
+        'blue lighten-3': (i == selected),
+        }"
+        @click="selectQuestion(i)" v-html="question.question">
         </p>
         <p class="body-text blue lighten-4 pa-4 mt-1 rounded" v-if="selected == i" v-html="question.answer">
         </p>
