@@ -58,7 +58,7 @@ export default {
         },
         {
           question: '<b>Q:</b> How can we contact you?',
-          answer: 'You can call or WhatsApp via our official number 0720244744 or write to us through <a href="mailto: `Info@adilirealestate.com`">info@adilirealestate.com</a> We are also on <a target="blank" href="http://facebook.com/adiliRealEstateKe"> Facebook</a>, <a target="blank" href="http://twitter.com/adiliRealEstateKe"> Twitter</a> and <a target="blank" href="http://instagram.com/adiliRealEstateKe"> Instagram</a> '
+          answer: 'You can call or WhatsApp via our official number 0720244744 or write to us through <a href="mailto: `Info@adilirealestate.com`">info@adilirealestate.com</a> We are also on <a target="blank" href="http://facebook.com/adilirealestateKE"> Facebook</a>, <a target="blank" href="http://twitter.com/adilirealestateKE"> Twitter</a> and <a target="blank" href="http://instagram.com/adilirealestateKE"> Instagram</a> '
         }
       ]
     }
