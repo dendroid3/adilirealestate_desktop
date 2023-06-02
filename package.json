@@ -1,6 +1,6 @@
 {
   "name": "adili",
-  "version": "2023.06.01",
+  "version": "2023.06.02",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
