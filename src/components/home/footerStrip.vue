@@ -49,11 +49,11 @@
         <v-col class="col-3 d-flex justify-center footer-block">
           <div>
             <h3 class="text-center">Our Properties</h3>
-            <div class="d-flex align-center" style="height: 100%;">
+            <div class="d-flex mt-4 pt-4" style="height: 100%;">
               <div>
                 <v-row class="mt-2 no-gutters mb-2">
-                  <v-col class="col-12 pb-0 ma-0 d-flex justify-center">
-                    <v-img class="img pointer rounded lighten-4"
+                  <v-col class="col-12 pb-0 ma-0 pa-0 d-flex justify-center">
+                    <v-img class="img pointer my-0 rounded darken-1"
                     :src="require(`../../assets/real_land_0.png`)"
                     > 
                     <span style="font-weight: 800;">
@@ -61,22 +61,22 @@
                     </span>
                   </v-img>
                   </v-col>
-                  <v-col class="col-12 pointer">
+                  <v-col class="col-12 pointer text-center mt-1">
                     Diani Crystal Gardens
                   </v-col>
                 </v-row>
-                <v-row class="mt-2 no-gutters mb-2">
-                  <v-col class="col-12 pb-0 ma-0 d-flex justify-center">
-                    <v-img class="img pointer rounded lighten-4"
+                <v-row class="mt-4 pt-4 no-gutters mb-2">
+                  <v-col class="col-12 pb-0 mt-4 pt-4 d-flex justify-center">
+                    <v-img class="img pointer my-0 rounded darken-1"
                     :src="require(`../../assets/real_land_0.png`)"
                     > 
                     <span style="font-weight: 800;">
-                       Daini Sunrise Estate
+                      Diani Sunrise Estate
                     </span>
                   </v-img>
                   </v-col>
-                  <v-col class="col-12 pointer">
-                     Daini Sunrise Estate
+                  <v-col class="col-12 pointer text-center mt-1">
+                    Diani Sunrise Estate
                   </v-col>
                 </v-row>
               </div>
@@ -85,16 +85,97 @@
         </v-col>
         <v-col class="col-3 d-flex justify-center footer-block">
           <div>
-            <h3 class="text-center">Our Contacts</h3>
-            <v-row class="mt-2">d</v-row>
-            <v-row class="mb-4">d</v-row>
+            <h3 class="text-center mb-4 pb-4">Our Contacts</h3>
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="call">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-phone
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  0720 244 744
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goEmail">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-mail
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  info@adilirealestate.com
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goSMS">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-message
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  0720 244 744
+                </div>
+              </v-col>
+            </v-row>
           </div>
         </v-col>
         <v-col class="col-3 d-flex justify-center">
           <div>
-            <h3 class="text-center">Our Socials</h3>
-            <v-row class="mt-2">d</v-row>
-            <v-row class="mb-4">d</v-row>
+            <h3 class="text-center mb-4 pb-4">Our Socials</h3>
+            
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsapp">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-whatsapp
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  0720 244 744
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goFacebook">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-facebook
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  Adili Real Estate
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goTwitter">
+              <v-col class="col-12 mt-4">
+                  <div class="mr-1 px-2 white--text">
+                    <v-icon large class="white--text">
+                      mdi-twitter
+                    </v-icon> 
+                  </div> 
+              </v-col>
+              <v-col class="col-12 white--text">
+                <div>
+                  @AdiliRealEstate
+                </div>
+              </v-col>
+            </v-row>
           </div>
         </v-col>
       </v-row>
@@ -139,7 +220,37 @@ export default {
   methods: {
     go(code){
       this.$router.push(code)
-    }
+    },
+
+    call(){
+      let url = `tel: +254720244744`
+      window.open(url, '_blank')
+    },
+
+    goEmail(){
+      let url = `mailto:'Info@adilirealestate.com'`
+      window.open(url, '_blank')
+    },
+
+    goSMS(){
+      let url = `sms: +254720244744`
+      window.open(url, '_blank')
+    },
+
+    goWhatsapp(){
+      let url = "https://wa.me/+254720244744?text=I'm%20interested%20in%20your%20land%20for%20sale"
+      window.open(url,'_blank')
+    },
+
+    goFacebook(){
+      let url = `https://www.facebook.com/AdiliRealEstate/`
+      window.open(url, '_blank')
+    },
+
+    goTwitter(){
+      let url = `https://www.twitter.com/AdiliRealEstate/`
+      window.open(url, '_blank')
+    },
   }
 }
 </script>
