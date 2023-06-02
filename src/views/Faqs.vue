@@ -1,16 +1,15 @@
 <template>
-  <div style="margin-bottom: 10rem;">
+  <div style="margin-bottom: 2rem;">
     <div class="d-flex justify-center align-center animate__animated animate__zoomIn mt-4 mb-2 heading blue--text">
       FAQs
     </div>
     
     <v-row class="no-gutters" v-for="(question, i) in faqs" :key="i">
-      <v-col class="col-10 offset-1">
-        <span class="sub-heading">
-          {{question.question}}
-        </span> <br>
-        <span class="body-text" v-html="question.answer">
-        </span>
+      <v-col class="col-8 offset-2">
+        <p class="sub-heading pointer mb-0" @click="selectQuestion(i)" v-html="question.question">
+        </p>
+        <p class="body-text blue lighten-4 pa-4 mt-1 rounded" v-if="selected == i" v-html="question.answer">
+        </p>
       </v-col>
     </v-row>
   </div>
@@ -20,6 +19,7 @@ export default {
   name: 'faqsSection',
   data(){
     return{
+      selected: null,
       faqs:[
         {
           question: 'Do your parcels have ready titles?',
@@ -65,6 +65,13 @@ export default {
     }
   },
   methods:{
+    selectQuestion(i){
+      if(this.selected == i){
+        this.selected = null
+      } else {
+        this.selected = i
+      }
+    }
   }
 
 }

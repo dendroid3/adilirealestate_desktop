@@ -256,19 +256,19 @@ export default {
   }
 
   .heading{
-    font-size: 36px;
+    font-size: 27px;
   }
 
   .sub-heading{
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .body-text{
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .caption{
-    font-size: 11px;
+    font-size: 8px;
   }
 
   .bold-1{

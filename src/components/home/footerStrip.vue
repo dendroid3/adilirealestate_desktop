@@ -179,8 +179,9 @@
           </div>
         </v-col>
       </v-row>
+      <v-row class="white mt-4 mb-4" style="width: 80vw; margin-left: 10vw; line-height: 1px; position: absolute;">.</v-row>    
 
-      <v-row>
+      <v-row class="pt-4">
         <v-col class="col-12 d-fl;;ex justify-center">
           <div class="d-flex justify-center">
             <span class="" >

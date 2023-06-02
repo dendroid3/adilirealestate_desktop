@@ -28,7 +28,7 @@
             :aspect-ratio="5/2"
             />
             <v-card-text class="text-center">
-                <span v-html="text"></span>
+                <span v-html="text" style="font-size: 14px;"></span>
             </v-card-text>
         </v-card>
     </div>
