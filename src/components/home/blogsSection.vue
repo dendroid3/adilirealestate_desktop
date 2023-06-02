@@ -73,12 +73,30 @@
 
       scrollTheSheetToRight(){
         let sheet = document.getElementById('sheet')
-        sheet.scrollLeft += 100
+        for (let index = 0; index < 250; index++) {
+          setTimeout(() => {
+            if(index/2 > 0.5){
+              sheet.scrollLeft += 2
+
+            } else {
+              sheet.scrollLeft += 1
+            }
+          }, index*3);
+        }
       },
 
       scrollTheSheetToLeft(){
         let sheet = document.getElementById('sheet')
-        sheet.scrollLeft -= 100 
+        for (let index = 0; index < 250; index++) {
+          setTimeout(() => {
+            if(index/2 > 0.5){
+              sheet.scrollLeft -= 2
+
+            } else {
+              sheet.scrollLeft -= 1
+            }
+          }, index*2);
+        }
       }
     }
   }
