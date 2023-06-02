@@ -39,7 +39,7 @@
                 emerging markets with high potential for growth. This gives your acquired land guaranteed high appreciation rate. 
                 We are dedicated to walk with you. We are a team of highly qualified professionals with years of experience in the real estate sector.
               </p>
-              <v-btn small>
+              <v-btn small @click="go('about')">
                 Learn more
               </v-btn>
             </v-row>
@@ -219,7 +219,7 @@ export default {
   },
   methods: {
     go(code){
-      this.$router.push(code)
+      window.open('/' + code, '_self')
     },
 
     call(){

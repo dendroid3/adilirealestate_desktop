@@ -1,6 +1,6 @@
 <template>
   <div style="margin-bottom: 5rem;">
-    <div class="d-flex align-center justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;" v-observe-visibility="visibilityChanged">
+    <div class="d-flex align-center justify-center animate__animated animate__zoomIn heading mt-4 mb-2 blue--text">
       Blogs and Tips
     </div>
     

@@ -1,6 +1,6 @@
 <template>
-  <div class="grey lighten-4"  style="padding-bottom: 9rem;">
-    <div class="d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;">
+  <div  style="padding-bottom: 9rem;">
+    <div class="d-flex justify-center animate__animated animate__zoomIn heading blue--text">
       Contact Us
     </div>
     
@@ -111,11 +111,11 @@
       </v-col>
     </v-row>
     <v-row class="no-gutters mb-3">
-      <v-col class="col-6 d-flex justify-center" style="border-right: solid 3px white;">
+      <v-col class="col-3 offset-2 d-flex justify-center" style="border-right: solid 3px white;">
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
-          <p style="font-size: 2.3rem;" class="text--center"> Book Site Visit </p>
+          <p class="text-center sub-heading"> Book Site Visit </p>
           <v-text-field
           :rules="bookRules"
           placeholder="name"
@@ -164,11 +164,11 @@
           </div>
         </v-form>
       </v-col>
-      <v-col class="col-6 d-flex justify-center">
+      <v-col class="col-3 offset-2 d-flex justify-center">
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
-          <p style="font-size: 2.3rem;" class="text--center"> Quick Message</p>
+          <p class="text-center sub-heading"> Quick Message</p>
           <v-text-field
           :rules="rules.requiredRule"
           placeholder="name"

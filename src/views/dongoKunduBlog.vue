@@ -1,7 +1,8 @@
-<template lang="html">
-  <div style="padding-bottom:20rem;">
-    <div class="text-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
-      <h2>{{"Dongo-Kundu Bypass: "}}</h2>
+<template>
+  <div style="padding-bottom:2rem;">
+    <div class="text-center animate__animated animate__zoomIn">
+      <p class="heading blue--text">{{"Dongo-Kundu Bypass:"}}</p>
+      <p class="heading blue--text">{{"The Gate to the South Coast"}}</p>
     </div>
     <v-row class="no-gutters">
       <v-col class="offset-2 col-8">
@@ -13,7 +14,7 @@
         integral to Vision 2030’s economic pillar. One such project aimed toward this goal is the Dongo Kundu Bypass Highway.
       </v-col>
       <v-col class="offset-2 col-8">
-        <h3 class="blue--text mt-2">{{"The Gate to the South Coast"}}</h3>
+        <p class="sub-heading blue--text mt-2">{{"The Gate to the South Coast"}}</p>
       </v-col>
       <v-col class="offset-2 col-8">
         Also known as the Mombasa Southern Bypass Highway, the 17.5KM, four-lane stretch of road is a brainchild of the past government which planned it in 2004. The plans to initiate 
@@ -33,7 +34,7 @@
         trade, investments, and tourism. The next section elaborates on some of the ways that the Bypass will open up the south coast.     
       </v-col>
       <v-col class="offset-2 col-8">
-        <h3 class="blue--text mt-2">{{"Benefits of Dongo Kundu to South Coast"}}</h3>
+        <p class="sub-heading blue--text mt-2">{{"Benefits of Dongo Kundu to South Coast"}}</p>
       </v-col>
       <v-col class="offset-2 col-8">
         <h4 class="ml-3 mt-1 blue--text">{{"Provide Easy Access to the Proposed Dongo-Kundu Special Economic Zone Area"}}</h4>

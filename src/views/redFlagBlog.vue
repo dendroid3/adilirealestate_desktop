@@ -1,7 +1,7 @@
 <template>
-    <div style="padding-bottom:20rem;">
+    <div style="padding-bottom:2rem;">
         <div class="text-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
-            <h2>{{"Red Flags when Buying Land"}}</h2>
+            <p class="blue--text heading">{{"Red Flags when Buying Land"}}</p>
         </div>
         <v-row class="no-gutters">
             <v-col class="offset-2 col-8">
@@ -22,7 +22,7 @@
                 />
             </v-col>
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Fake clients during Land Viewing."}}</h3>
+                <p class="blue--text mt-2 sub-heading">{{"Fake clients during Land Viewing."}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -36,7 +36,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Inconsistent information on Ads."}}</h3>
+                <p class="blue--text mt-2 sub-heading">{{"Inconsistent information on Ads."}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -52,7 +52,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Paying to Personal Accounts"}}</h3>
+                <p class="blue--text mt-2 sub-heading">{{"Paying to Personal Accounts"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">

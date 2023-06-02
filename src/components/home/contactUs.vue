@@ -114,7 +114,7 @@
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
-          <p style="font-size: 2.3rem;" class="text--center"> Book Site Visit </p>
+          <p class="text-center sub-heading"> Book Site Visit </p>
           <v-text-field
           :rules="bookRules"
           placeholder="name"
@@ -167,7 +167,7 @@
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
-          <p style="font-size: 2.3rem;" class="text--center"> Quick Message</p>
+          <p class="text-center sub-heading"> Quick Message</p>
           <v-text-field
           :rules="rules.requiredRule"
           placeholder="name"

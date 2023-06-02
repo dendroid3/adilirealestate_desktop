@@ -1,7 +1,7 @@
-<template lang="html">
-  <div style="padding-bottom:20rem;">
-    <div class="text-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
-      <h2>{{"Land Location: Why Strategic Land Location Matters"}}</h2>
+<template>
+  <div style="padding-bottom:2rem;">
+    <div class="text-center animate__animated animate__zoomIn">
+      <p class="heading blue--text">{{"Land Location: Why Strategic Land Location Matters"}}</p>
     </div>
     <v-row class="no-gutters">
       <v-col class="offset-2 col-8">
@@ -18,7 +18,7 @@
         </ul>
       </v-col>
       <v-col class="offset-2 col-8">
-        <h3 class="blue--text mt-2">{{"Why Location is Vital"}}</h3>
+        <p class="sub-heading blue--text mt-2">{{"Why Location is Vital"}}</p>
       </v-col>
       <v-col class="offset-2 col-8">
         <span class="pl-4">
@@ -47,7 +47,7 @@
         </span>   
       </v-col>
       <v-col class="offset-2 col-8">
-        <h3 class="blue--text mt-2">{{"Factors That Inform a Good Location"}}</h3>
+        <p class="sub-heading blue--text mt-2">{{"Factors That Inform a Good Location"}}</p>
       </v-col>
       <v-col class="offset-2 col-8">
         <h4 class="ml-3 mt-1 blue--text">{{"Social Amenities"}}</h4>

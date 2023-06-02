@@ -49,7 +49,7 @@
           Properties
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
-          Blog
+          Blogs
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('faqs')">
           FAQ

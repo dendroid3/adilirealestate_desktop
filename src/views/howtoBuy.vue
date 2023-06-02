@@ -1,9 +1,9 @@
 <template>
-    <div style="padding-bottom:20rem;">
-        <div class="text-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
-            <h2>{{"Process of Buying Land"}}</h2>
+    <div style="padding-bottom:2rem;">
+        <div class="text-center animate__animated animate__zoomIn heading blue--text">
+            <p>{{"Process of Buying Land"}}</p>
         </div>
-        <v-row class="no-gutters">
+        <v-row class="no-gutters body-text">
             <v-col class="offset-2 col-8">
                 A few malicious land-selling enterprises have painted the buying process to be confusing. 
                 However, the confusion is a deliberate tactic, “if you cannot convince them, confuse them.” 
@@ -19,7 +19,7 @@
                 />
             </v-col>
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Identify Land"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Identify Land"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -32,7 +32,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Arrange a Site Visit"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Arrange a Site Visit"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -44,7 +44,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Get Documents"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Get Documents"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -59,7 +59,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Engage Surveyor"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Engage Surveyor"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -69,7 +69,7 @@
             </v-col>
             
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Land Search"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Land Search"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -86,7 +86,7 @@
             </v-col>
             
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Engage a Lawyer"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Engage a Lawyer"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -98,7 +98,7 @@
             </v-col>
             
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Pay"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Pay"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -109,7 +109,7 @@
             </v-col>
             
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Finalize Purchase"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Finalize Purchase"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -123,7 +123,7 @@
             </v-col>
 
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Wait"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Wait"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">
@@ -132,7 +132,7 @@
             </v-col>
             
             <v-col class="offset-2 col-8">
-                <h3 class="blue--text mt-2">{{"Collect Title Deed"}}</h3>
+                <p class="sub-heading blue--text mt-2">{{"Collect Title Deed"}}</p>
             </v-col>
             <v-col class="offset-2 col-8">
                 <span class="pl-4">

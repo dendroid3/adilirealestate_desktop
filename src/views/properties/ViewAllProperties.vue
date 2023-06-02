@@ -1,21 +1,26 @@
-<template lang="html">
+<template>
   <div class="no-gutters" style="margin-bottom: 5rem;">
-    <div class="d-flex align-center justify-center animate__animated animate__zoomIn" style="font-size: 2rem; color: red;" v-observe-visibility="visibilityChanged">
+    <div class="d-flex align-center justify-center mt-4 mb-2 animate__animated animate__zoomIn heading blue--text">
       Available Properties
     </div>
-    <v-row class="no-gutters">  
-      <v-col class="col-6 offset-3">
-        <property-card />
+    <v-row>  
+      <v-col class="col-4 offset-2">
+        <diani-crystal />
+      </v-col>
+      <v-col class="col-4">
+        <diani-sunrise />
       </v-col>
     </v-row>
   </div>
 </template>
 <script>
-  import propertyCard from "../../components/home/propertyCard.vue"
+  import dianiCrystal from '../../components/properties/dianiCrystal.vue';
+  import dianiSunrise from '../../components/properties/dianiSunrise.vue';
+
   export default {
     name: 'ViewAllProperties',
     components:{
-      propertyCard
+      dianiCrystal, dianiSunrise
     },
     data(){
       return {

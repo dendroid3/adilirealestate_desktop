@@ -1,9 +1,9 @@
-<template lang="html">
-    <div style="padding-bottom:20rem;">
-      <div class="text-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
-        <h2>{{"Land as a Hedge against Inflation"}}</h2>
+<template>
+    <div style="padding-bottom:2rem;">
+      <div class="text-center animate__animated animate__zoomIn blue--text heading">
+        <p>{{"Land as a Hedge against Inflation"}}</p>
       </div>
-      <v-row class="no-gutters">
+      <v-row class="no-gutters body-text">
         <v-col class="offset-2 col-8">
             People naturally pay more interest to alarming news; this can be explained from an evolutionary stand point where the need to be 
             keen on assumed imminent threats was vital to survival. With this knowledge one may argue that the current panic about inflation is 
@@ -37,7 +37,7 @@
             sourcing for alternate means to store value. Your best bet in this is in acquiring land. 
         </v-col>
         <v-col class="offset-2 col-8">
-          <h3 class="blue--text mt-2">{{"Using Land as A Hedging Asset"}}</h3>
+          <p class="blue--text mt-2 sub-heading">{{"Using Land as A Hedging Asset"}}</p>
         </v-col>
         <v-col class="offset-2 col-8">
             A hedge is a means of protecting oneself from financial loses or other adverse financial circumstances. Acquiring none depreciating assets is one of the most 
@@ -65,7 +65,7 @@
             </ul>
         </v-col>
         <v-col class="offset-2 col-8">
-          <h3 class="blue--text mt-2">{{"Land Liquidity"}}</h3>
+          <p class="blue--text mt-2 sub-heading">{{"Land Liquidity"}}</p>
         </v-col>
         <v-col class="offset-4 col-4 d-flex justify-center">
           <v-img class="rounded lighten-4"
