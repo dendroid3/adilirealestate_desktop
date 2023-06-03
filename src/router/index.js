@@ -122,9 +122,14 @@ const routes = [
     component: () => import('../views/ViewUnit.vue')
   },
   {
-    path: '/property/:id',
-    name: 'MyProperty',
+    path: '/property/diani-crystal-gardens',
+    name: 'dianiCristalGarden',
     component: () => import('../views/properties/View.vue')
+  },
+  {
+    path: '/property/diani-sunrise-estate',
+    name: 'MyProperty',
+    component: () => import('../views/properties/sunriseEstate.vue')
   },
   {
     path: '/add_property',

@@ -1,75 +1,50 @@
-<template lang="html">
-  <div style="padding-bottom: 10rem;">
-    <div class="d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
+<template>
+  <div style="padding-bottom: 1rem;">
+    <div class="d-flex justify-center animate__animated animate__zoomIn blue--text heading">
       Diani Crystal Garden
     </div>
     <v-row class="no-gutters mb-3">
       <v-col class="col-8  pa-4" style="border-right: solid 3px white;">
-        <!-- <v-carousel
-        class="pa-0 grey lighten-2"
-        :continuous="true"
-        :show-arrows="true"
-        hide-delimiter-background
-        delimiter-icon="mdi-minus"
-        height="270"
-        >
-          <v-carousel-item
-          ripple
-          class="pa-2 ma-0"
-          active-class="red--text"
-          v-for="c in counter"
-          :key="c">
-            <v-img class="img rounded lighten-4 ma-0"
-            contain
-            :aspect-ratio="16/9"
-            :src="require(`../../assets/land_1.jpeg`)"
-            />
-          </v-carousel-item>
-        </v-carousel> -->
         <v-img class="img rounded lighten-4 ma-0"
           v-if="img_source == 'real_land_0.png'"
           contain
+          :aspect-ratio="2/1"
           :src="require(`../../assets/real_land_0.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
           v-if="img_source == 'real_land_1.png'"
           contain
+          :aspect-ratio="2/1"
           :src="require(`../../assets/real_land_1.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
           v-if="img_source == 'real_land_2.png'"
           contain
+          :aspect-ratio="2/1"
           :src="require(`../../assets/real_land_2.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
           v-if="img_source == 'real_land_3.png'"
           contain
+          :aspect-ratio="2/1"
           :src="require(`../../assets/real_land_3.png`)"
           />
           <v-img class="img rounded lighten-4 ma-0"
           v-if="img_source == 'real_land_4.png'"
           contain
+          :aspect-ratio="2/1"
           :src="require(`../../assets/real_land_4.png`)"
           />
         <div>
-          <span class="d-flex white align-center red rounded justimmfy-center black--text" style="font-weight:900;">
+          <span class="d-flex white align-center red rounded justimmfy-center black--text">
             <v-spacer />
-              <span style="font-size: 1.5rem;">
+              <span class="white--text sub-heading">
                 {{"350,000"}}
               </span>
             <v-spacer />
           </span>
         </div>
       
-      <!-- <v-row class="col-12 px-4 text--bold" style="font-weight: 900;">
-        <v-col class="col-2" v-for="c in counter" :key="c">
-          <v-img class="img rounded lighten-4 ma-0"
-          contain
-          :aspect-ratio="1/1"
-          :src="require(`../../assets/land_1.jpeg`)"
-          />
-        </v-col>
-      </v-row> -->
       <v-col class="col-12 d-flex justify-center ">
             <v-img class="rounded  mx-1"
             :class="{
@@ -127,12 +102,12 @@
         <h5> {{"property.description"}} </h5>
       </v-col> -->
       <v-col class="col-12 px-4 text--bold" style="font-weight: 900;">
-        <h3 class="d-flex align-center mr-2"> 
+        <p class="d-flex align-center mr-2"> 
           <v-icon small class="red--text">
             mdi-pin
           </v-icon>
           Diani
-        </h3>
+        </p>
         <h5 class="d-flex"> 
           <v-icon x-small class="green--text mx-1">
             mdi-circle
@@ -154,19 +129,18 @@
       </v-col>
       
       </v-col>
-      <v-col class="col-4 d-flex justify-center">
-
-        <!-- <v-form ref="form" class="" style="width: 90%;" >
-          <div  class="d-flex justify-space-between">
-          </div> -->
+      <v-col class="col-4 d-flex justify-center grey py-2 rounded lighten-4">
 
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           v-if="enquire"
           :lazy-validation="lazy">
-          <div  class="d-flex justify-space-between">
-            <p style="font-size: 2rem;" class="text--center"> Quick Message</p>
-            <v-btn sml class="success" @click="enquireFunction(false)"> Book </v-btn>
+          <div  class="d-flex">
+            <v-spacer />
+            <p class="text-center sub-heading"> Quick Message</p>
+            <v-spacer />
+
+            <v-btn small class="success" @click="enquireFunction(false)"> Book </v-btn>
           </div>
           <v-text-field
           :rules="rules.requiredRule"
@@ -215,19 +189,16 @@
             <v-btn class="success" :disabled="!enquiryValid" :loading="enquire_loading" @click="enquireMethod"> send </v-btn>
           </div>
         </v-form>
-        <!-- <v-form ref="form" class="" style="width: 90%;" v-if="!enquire">
-          <div  class="d-flex justify-space-between">
-          <p style="font-size: 2.3rem;" class="text--center"> Book Site Visit </p>
-            <v-btn class="success" @click="enquireFunction(true)"> Enquire </v-btn>
-          </div> -->
        
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           v-if="!enquire"
           :lazy-validation="lazy">
-          <div  class="d-flex justify-space-between">
-            <p style="font-size: 2.3rem;" class="text--center"> Book Site Visit </p>
-            <v-btn class="success" @click="enquireFunction(true)"> Enquire </v-btn>
+          <div class="d-flex">
+            <v-spacer />
+            <p class="text--center sub-heading"> Book Site Visit </p>
+            <v-spacer />
+            <v-btn small class="success" @click="enquireFunction(true)"> Enquire </v-btn>
           </div>
           <v-text-field
           :rules="bookRules"
@@ -279,7 +250,7 @@
       </v-col>
     </v-row>
     <v-row class="no-gutters">
-      <v-col class="col-12 d-flex justify-center animate__animated animate__zoomIn" style="font-size: 2.3rem; color: red;">
+      <v-col class="col-12 d-flex justify-center animate__animated animate__zoomIn heading blue--text">
         How To Buy
       </v-col>
       <v-col class="col-8 offset-2">
@@ -296,9 +267,9 @@
           >
             <v-row justify="space-between">
               <v-col cols="12" class="blue--text">
-                <h3>
+                <p class="sub-heading">
                   Contact Us
-                </h3>
+                </p>
               </v-col>
               <v-col
                 class=""
@@ -325,9 +296,9 @@
           >
             <v-row justify="space-between">
               <v-col cols="12" class="blue--text">
-                <h3>
+                <p class="sub-heading">
                   Visit Site
-                </h3>
+                </p>
               </v-col>
               <v-col
                 class=""
@@ -354,9 +325,9 @@
           >
             <v-row justify="space-between">
               <v-col cols="12" class="blue--text">
-                <h3>
+                <p class="sub-heading">
                   Clear Payment
-                </h3>
+                </p>
               </v-col>
               
               <v-col
@@ -384,9 +355,9 @@
           >
             <v-row justify="space-between">
               <v-col cols="12" class="blue--text">
-                <h3>
+                <p class="sub-heading">
                   Get Title Deed
-                </h3>
+                </p>
               </v-col>
               
               <v-col
@@ -414,9 +385,9 @@
           >
             <v-row justify="space-between">
               <v-col cols="12" class="blue--text">
-                <h3>
+                <p class="sub-heading">
                   Develop
-                </h3>
+                </p>
               </v-col>
               
               <v-col
