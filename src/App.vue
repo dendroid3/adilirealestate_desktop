@@ -42,26 +42,47 @@
       </div>
       <v-spacer></v-spacer>
       <section class="d-flex align-end" style="height: 100%;">
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('home')" :class="{
+          'blue lighten-2': page_name != 'Home',
+          'red lighten-2': page_name == 'Home'
+        }">
           Home
         </v-btn>
         
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('about')" :class="{
+          'blue lighten-2': page_name != 'About',
+          'red lighten-2': page_name == 'About'
+        }">
           About Us
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('properties')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('properties')" :class="{
+          'blue lighten-2': page_name != 'Properties',
+          'red lighten-2': page_name == 'Properties'
+        }">
           Properties
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('how-to-buy')" :class="{
+          'blue lighten-2': page_name != 'howToBuy',
+          'red lighten-2': page_name == 'howToBuy'
+        }">
           How To Buy
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('faqs')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('faqs')" :class="{
+          'blue lighten-2': page_name != 'faqs',
+          'red lighten-2': page_name == 'faqs'
+        }">
           FAQ
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('blogs')" :class="{
+          'blue lighten-2': page_name != 'blogs',
+          'red lighten-2': page_name == 'blogs'
+        }">
           Blogs
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('contact')">
+        <v-btn text small class="bold white--text mx-2" @click="goToSection('contact')" :class="{
+          'blue lighten-2': page_name != 'contact',
+          'red lighten-2': page_name == 'contact'
+        }">
           Contact Us
         </v-btn>
       </section>
@@ -150,6 +171,7 @@ export default {
       return this.$vuetify.breakpoint.xsOnly;
     }
   },
+
   data(){
     return{
       fetching_my_properties: false,
@@ -175,19 +197,26 @@ export default {
       },
       applying: false,
       showDiscover: true,
-      counter: 10
+      page_name: 'home'
     }
   },
   
-    watch: {
-      group () {
-        this.drawer = false
-      },
+  watch: {
+    group () {
+      this.drawer = false
     },
+    $route (to, from){
+        this.setPageName()
+    }
+  },
   methods:{
     ...mapActions(['toogleFilter','logout']),
+    setPageName(){
+      this.page_name = this.$router.history.current.name
+      console.log(this.page_name)
+    },
     go(code){
-      window.location = code
+      this.$router.push(code)
     },
     toogle(){
       this.toogleFilter(true)
@@ -202,46 +231,13 @@ export default {
     goDashboard(){
         this.go('dashboard')
     },
-    
-    requestFilteredVacancies($event){
-      console.log($event)
-      console.log(this.filter)
-      this.applying = true,
-      this.fetchFilteredVacancies(this.filter).then((res) => {
-        this.applying = res,
-        this.open_filter = res
-      })
-    },
-
-    logOut(){
-      if(confirm("You are about to log out. Continue?")){
-        // alert('login out')
-        this.logout()
-
-      } else {
-        // alert("nope")
-      }
-    }
   },
   mounted(){
-    console.log(this.$router.history.current.path)
-    this.showDiscover = (this.$router.history.current.path == '/')
-
-    console.log(this.$router.history.current.path == '/dashboard')
-    this.showNavBar = !(this.$router.history.current.path == '/dashboard')
     if(this.isMobile){
       let url = 'https://m.adilirealestate.com'
       window.location = url
     }
   },
-  updated(){
-    console.log(this.$router.history.current.path)
-    this.showDiscover = (this.$router.history.current.path == '/')
-
-    console.log(this.$router.history.current.path == '/dashboard')
-    this.showNavBar = !(this.$router.history.current.path == '/dashboard')
-  }
-//a7d98b2e21a38e553e564fced22647bf
 };
 </script>
 <style lang="css">

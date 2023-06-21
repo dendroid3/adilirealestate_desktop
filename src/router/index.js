@@ -102,6 +102,11 @@ const routes = [
     component: () => import('../views/Faqs.vue')
   },
   {
+    path: '/how-to-buy',
+    name: 'howToBuy',
+    component: () => import('../views/howToBuyView.vue')
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('../views/Contact.vue')

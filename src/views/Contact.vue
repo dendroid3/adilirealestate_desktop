@@ -1,170 +1,121 @@
 <template>
-  <div  style="padding-bottom: 9rem;">
+  <div class="gr">
     <div class="d-flex justify-center animate__animated animate__zoomIn heading blue--text">
       Contact Us
     </div>
-    
-    <v-row>
-      <v-col class="col-2 d-flex justify-center">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <a  href="tel: +254720244744">
-              <v-icon class="mx-2 blue--text">
-                mdi-phone
-              </v-icon>
-            </a>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-            <a  href="tel: +254720244744">
-              <span>
-                0720 244 744
-              </span>
-            </a>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col class="col-2">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <a href="sms: 0720244744">
-              <v-icon class="mx-2 blue--text">
-                mdi-message
-              </v-icon>
-            </a>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-            <a href="sms: 0720244744">
-              <span>
-                0720 244 744
-              </span>
-            </a>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col class="col-2">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <v-icon class="mx-2 black--text">
-              mdi-whatsapp
-            </v-icon>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-            <span>
-              0720 244 744
-            </span>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col class="col-2">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <a href="mailto: 'Info@adilirealestate.com'">
-              <v-icon class="mx-2 green--text">
-                mdi-email
-              </v-icon>
-            </a>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-          <a href="mailto: 'Info@adilirealestate.com'">
-            <span>
-              info@adilirealestate.com
-            </span>
-          </a>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col class="col-2">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <a href="https://www.facebook.com/AdiliRealEstate/" target="_blank">
-              <v-icon class="mx-2 blue--text">
-                mdi-facebook
-              </v-icon>
-            </a>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-            <a href="https://www.facebook.com/AdiliRealEstate/" target="_blank">
-              <span>
-                Adili Real Estate
-              </span>
-            </a>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col class="col-2">
-        <v-row class="no-gutters">
-          <v-col class="col-12 d-flex justify-center">
-            <a href="https://www.twitter.com/AdiliRealEstate/" target="_blank">
-              <v-icon class="mx-2 blue--text">
-                mdi-twitter
-              </v-icon>
-            </a>
-          </v-col>
-          <v-col class="col-12 d-flex justify-center">
-            <a href="https://www.twitter.com/AdiliRealEstate/" target="_blank">
-              <span>
-                Adili Real Estate
-              </span>
-            </a>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+
     <v-row class="no-gutters mb-3">
-      <v-col class="col-3 offset-2 d-flex justify-center" style="border-right: solid 3px white;">
-        <v-form ref="form" class="" style="width: 90%;"
-          v-model="valid"
-          :lazy-validation="lazy">
-          <p class="text-center sub-heading"> Book Site Visit </p>
-          <v-text-field
-          :rules="bookRules"
-          placeholder="name"
-          v-model="book_data.name"
-          label="name"
-          type="name"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="email"
-          v-model="book_data.email"
-          label="email"
-          type="name"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="phone number"
-          v-model="book_data.phone_number"
-          label="phone number"
-          type="number"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="pick the date you are available"
-          v-model="book_data.dates"
-          label="availability"
-          type="name"
-          outlined
-          clearable />
-          <v-textarea
-          :rules="bookRules"
-          placeholder="additional comment"
-          v-model="book_data.message"
-          label="additional commment"
-          type="name"
-          outlined
-          clearable />
-          <p class="text-center">
-            {{"Site visits are prearranged and available any day of the weekend. Fill this form to initiate the process. We will get back to you"}}
-          </p>
-          <div  class="d-flex justify-end">
-            <v-btn class="success mb-4" :disabled="!bookValid" :loading="book_loading" @click="book"> book </v-btn>
+      <v-col class="col-6">
+        <div>
+          <div>
+            <v-img class="img my-1"
+            contain
+            :aspect-ratio="5/1"
+            :src="require(`../assets/contact_us.svg`)"
+            />
           </div>
-        </v-form>
+          <div class="pa-4 ">
+            <div class="mx-4">
+              <p class="text-center">
+                We would like to get in touch with you. Get a hold of us through:
+              </p>
+              <v-row>
+                <v-col class="col-6">
+                  <h3 class="text-center mb-4 pb-4">Our Contacts</h3>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="call">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-phone
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        0720 244 744
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goEmail">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-mail
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        info@adilirealestate.com
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goSMS">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-message
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        0720 244 744
+                      </div>
+                    </v-col>
+                  </v-row>
+                </v-col>
+                <v-col class="col-6">
+                  <h3 class="text-center mb-4 pb-4">Our Socials</h3>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goWhatsapp">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-whatsapp
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        0720 244 744
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goFacebook">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-facebook
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        Adili Real Estate
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row class="mt-4 no-gutters text-center rounded blue darken-1 pa-4 pointer" @click="goTwitter">
+                    <v-col class="col-12 mt-4">
+                        <div class="mr-1 px-2 white--text">
+                          <v-icon large class="white--text">
+                            mdi-twitter
+                          </v-icon> 
+                        </div> 
+                    </v-col>
+                    <v-col class="col-12 white--text">
+                      <div>
+                        @AdiliRealEstate
+                      </div>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </div>
+          </div>
+        </div>
       </v-col>
-      <v-col class="col-3 offset-2 d-flex justify-center">
+      <v-col class="col-5 offset-1 d-flex justify-center">
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
           :lazy-validation="lazy">
@@ -221,8 +172,8 @@
   </div>
 </template>
 <script>
-  import axios from 'axios'
-  import { mapActions } from 'vuex'
+ import { mapActions } from 'vuex'
+ import axios from 'axios'
   export default{
     name: 'Contact',
     computed:{
@@ -273,9 +224,34 @@
     },
     methods: {
       ...mapActions(['toogleAlertBox']),
+      call(){
+        let url = `tel: +254720244744`
+        window.open(url, '_blank')
+      },
+
+      goEmail(){
+        let url = `mailto:'Info@adilirealestate.com'`
+        window.open(url, '_blank')
+      },
+
+      goSMS(){
+        let url = `sms: +254720244744`
+        window.open(url, '_blank')
+      },
+
       goWhatsapp(){
         let url = "https://wa.me/+254720244744?text=I'm%20interested%20in%20your%20land%20for%20sale"
         window.open(url,'_blank')
+      },
+
+      goFacebook(){
+        let url = `https://www.facebook.com/AdiliRealEstate/`
+        window.open(url, '_blank')
+      },
+
+      goTwitter(){
+        let url = `https://www.twitter.com/AdiliRealEstate/`
+        window.open(url, '_blank')
       },
       async enquire(){
         try{
