@@ -12,12 +12,20 @@
     <div id="properties" class="mt-4 mb-4 pb-4">
       <properties-card />    
     </div>
+
+    <div id="how_to_buy">
+      <howToBuy />
+    </div>
     
+    <div id="faqs">
+      <faqs-section />
+    </div>
+
     <div id="blogs" ref="blogs" class="pt-4">
       <blogs-section />
     </div>
 
-    <div class="d-flex justify-center mt-4 pt-4 align-center heading blue--text" style="z-index: 1;">
+    <!-- <div class="d-flex justify-center mt-4 pt-4 align-center heading blue--text" style="z-index: 1;">
       Why Invest With Us
     </div>
     <v-row class="pa-4 mb-4">
@@ -48,10 +56,7 @@
         </v-row>
       </v-col>
       <v-col class="col-1"></v-col>
-    </v-row>
-    <div id="faqs">
-      <faqs-section />
-    </div>
+    </v-row> -->
     
     <div id="contact" class="contact pt-4">
       <contact-us />
@@ -66,6 +71,7 @@ import contactUs from '../components/home/contactUs.vue'
 import blogsSection from '../components/home/blogsSection.vue'
 import faqsSection from '../components/home/faqsSection.vue'
 import whyInvestCard from '../components/home/whyInvesCard.vue'
+import howToBuy from '../components/widgets/howToBuy.vue'
 
 import topPics from '../components/home/topPics.vue'
 import aboutCard from '../components/home/aboutCard.vue'
@@ -85,7 +91,8 @@ export default {
     footerStrip,
     AboutCard,
     ContactUs,
-    whyInvestCard
+    whyInvestCard,
+    howToBuy
 },
   computed:{
     ...mapGetters(['getVacancies', 'isWelcomeCardOpen', 'getPropertiesView']),

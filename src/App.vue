@@ -45,17 +45,21 @@
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('home')">
           Home
         </v-btn>
+        
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
+          About Us
+        </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('properties')">
           Properties
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
-          Blogs
+          How To Buy
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('faqs')">
           FAQ
         </v-btn>
-        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('about')">
-          About
+        <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('blogs')">
+          Blogs
         </v-btn>
         <v-btn text small class="blue lighten-2 bold white--text mx-2" @click="goToSection('contact')">
           Contact Us
