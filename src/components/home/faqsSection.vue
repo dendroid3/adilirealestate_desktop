@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pale-blue py-4">
     <div class="d-flex justify-center heading blue--text align-center animate__animated animate__zoomIn mt-4">
       FAQs
     </div>  
@@ -84,3 +84,5 @@ export default {
 
 }
 </script>
+
+

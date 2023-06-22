@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="pale-blue py-4">
     <div class="d-flex justify-center mt-4 align-center heading blue--text" style="z-index: 1;">
       Available Properties 
     </div>
-    <v-row>  
+    <v-row class="mb-4">  
       <v-col class="col-4 offset-2">
         <diani-crystal />
       </v-col>

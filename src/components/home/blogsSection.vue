@@ -72,6 +72,7 @@
       },
 
       scrollTheSheetToRight(){
+        console.log("I am pressed")
         let sheet = document.getElementById('sheet')
         for (let index = 0; index < 250; index++) {
           setTimeout(() => {

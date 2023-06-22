@@ -1,41 +1,35 @@
 <template>
-<div class="pa-0 my-2"
+<div class="pa-0 my-0"
   style="z-index:02;"> 
     <div style=" max-height: 70vh;">
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 0"
-      :aspect-ration="1/1"
       contain
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/01.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 1"
-      :aspect-ration="1/1"
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/02.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 2"
-      contain
       :aspect-ration="1/1"
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/03.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 3"
-      contain
       :aspect-ration="1/1"
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/04.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 4"
-      :aspect-ration="1/1"
       contain
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/05.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter >= 5"
-      :aspect-ration="1/1"
       contain
-      :src="require(`../../assets/diani_sunrise_poster.jpeg`)"
+      :src="require(`../../assets/banners/01.png`)"
       />
     </div>
   </div>

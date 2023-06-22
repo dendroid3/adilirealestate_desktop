@@ -401,4 +401,7 @@ a{
 .secondary-color {
   background-color: #231F20;
 }
+.pale-blue{
+  background-color: #48aaf912;
+}
 </style>
