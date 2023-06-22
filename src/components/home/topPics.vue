@@ -2,32 +2,38 @@
 <div class="pa-0 my-0"
   style="z-index:02;"> 
     <div style=" max-height: 70vh;">
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter == 0"
+      @click="goSunrise"
       contain
       :src="require(`../../assets/banners/01.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter == 1"
+      @click="goSunrise"
       :src="require(`../../assets/banners/02.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter == 2"
       contain
+      @click="goSunrise"
       :src="require(`../../assets/banners/03.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter == 3"
       contain
+      @click="goSunrise"
       :src="require(`../../assets/banners/04.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter == 4"
+      @click="goSunrise"
       contain
       :src="require(`../../assets/banners/05.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
+      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight "
       v-if="counter >= 5"
+      @click="goSunrise"
       contain
       :src="require(`../../assets/banners/01.png`)"
       />
@@ -44,7 +50,9 @@ export default {
     }
   },
   methods:{
-    
+    goSunrise(){
+      this.$router.push('/property/diani-sunrise-estate')
+    }
   },
   mounted(){
     setInterval(() => {
