@@ -13,12 +13,12 @@
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 2"
-      :aspect-ration="1/1"
+      contain
       :src="require(`../../assets/banners/03.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "
       v-if="counter == 3"
-      :aspect-ration="1/1"
+      contain
       :src="require(`../../assets/banners/04.png`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 animate__animated animate__slideInRight "

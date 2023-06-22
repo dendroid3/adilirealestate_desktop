@@ -13,7 +13,7 @@
                     <v-sheet class="d-flex pale-blue" style="overflow-x: scroll;" id="sheet_2">
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -22,7 +22,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -42,7 +42,7 @@
                         </v-col>
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -51,7 +51,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -71,7 +71,7 @@
                         </v-col>
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -80,7 +80,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -100,7 +100,7 @@
                         </v-col>
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -109,7 +109,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -129,7 +129,7 @@
                         </v-col>
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -138,7 +138,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -158,7 +158,7 @@
                         </v-col>
                         <v-col class="how_to_card">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section  elevation-3 rounded text-center">
+                                <div class="section  elevation-3 rounded grey lighten-4 text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
@@ -167,7 +167,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
@@ -196,7 +196,7 @@
                                         </v-col>
                                         <v-col class="col-1"></v-col>
                                         <v-col
-                                        class="white rounded col-10"
+                                        class="grey lighten-3 rounded col-10"
                                         >
                                             <v-img class="mx-1"
                                             contain
