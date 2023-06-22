@@ -243,11 +243,10 @@ export default {
 <style lang="css">
 
   html{
-      /* font-family: dosis; */
       width: 100vw;
-      font-family: 'EB Garamond', serif;
-      /* width: 70vw; */
       overflow: auto;
+      font-family: 'Poppins', sans-serif;
+
   }
   #app{
       padding: 0;

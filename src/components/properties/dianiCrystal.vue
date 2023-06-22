@@ -35,7 +35,7 @@
                 />
             </v-col>
             <v-col class="col-12 d-flex justify-center ">
-                <v-img class="rounded mx-1"
+                <v-img class="pointer rounded mx-1"
                 :class="{
                 'red': img_source == 'real_land_0.png'
                 }"
@@ -45,7 +45,7 @@
                 @click="changeSource('real_land_0')"
                 :src="require(`../../assets/real_land_0.png`)"
                 />
-                <v-img class="rounded mx-1"
+                <v-img class="pointer rounded mx-1"
                 :class="{
                 'red': img_source == 'real_land_1.png'
                 }"
@@ -55,7 +55,7 @@
                 :height="20"
                 :src="require(`../../assets/real_land_1.png`)"
                 />
-                <v-img class="rounded mx-1"
+                <v-img class="pointer rounded mx-1"
                 :class="{
                 'red': img_source == 'real_land_2.png'
                 }"
@@ -65,7 +65,7 @@
                 :height="20"
                 :src="require(`../../assets/real_land_2.png`)"
                 />
-                <v-img class="rounded mx-1"
+                <v-img class="pointer rounded mx-1"
                 :class="{
                 'red': img_source == 'real_land_3.png'
                 }"
@@ -75,7 +75,7 @@
                 :height="20"
                 :src="require(`../../assets/real_land_3.png`)"
                 />
-                <v-img class="rounded mx-1"
+                <v-img class="pointer rounded mx-1"
                 :class="{
                 'red': img_source == 'real_land_4.png'
                 }"
