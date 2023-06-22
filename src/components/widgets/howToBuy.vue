@@ -187,7 +187,7 @@
                         </v-col>
                         <v-col id="longest_col">
                             <div class="d-flex justify-center main my-1">
-                                <div class="section elevation-3 rounded text-center">
+                                <div class="section elevation-3 grey lighten-4 rounded text-center">
                                     <v-row>
                                         <v-col cols="12" class="blue--text text-">
                                             <p class="sub-heading">
