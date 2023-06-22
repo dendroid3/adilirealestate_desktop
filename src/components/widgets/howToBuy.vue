@@ -272,6 +272,11 @@ export default {
         cards.forEach(card => {
             card.style.height = max_height + 'px'
         })
+        if(this.$router.history.current.name == 'howToBuy'){
+            setInterval(() => {
+                this.scrollTheSheetToRight()
+            }, 2500);
+        }
     }
 }
 </script>
