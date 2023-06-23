@@ -10,7 +10,7 @@
       }"
       @click="goSunrise"
       contain
-      :src="require(`../../assets/banners/01.png`)"
+      :src="require(`../../assets/banners/01.jpeg`)"
       />
       <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated"
       v-show="counter == 1"
@@ -59,7 +59,7 @@
       }"
       @click="goSunrise"
       contain
-      :src="require(`../../assets/banners/01.png`)"
+      :src="require(`../../assets/banners/01.jpeg`)"
       />
     </div>
   </div>
@@ -81,16 +81,16 @@ export default {
   },
   mounted(){
     
-    setInterval(() => {
-        this.in_transit = true
-      }, 1000);
     // setInterval(() => {
-    //   if(this.counter < 7){
-    //     this.counter ++
-    //   } else {
-    //     this.counter = 0
-    //   }
-    // }, 2000);
+    //     this.in_transit = true
+    //   }, 1000);
+    setInterval(() => {
+      if(this.counter < 7){
+        this.counter ++
+      } else {
+        this.counter = 0
+      }
+    }, 20000);
   }
 }
 </script>

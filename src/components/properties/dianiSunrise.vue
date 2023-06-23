@@ -1,13 +1,26 @@
 <template>
     <div>
-    <v-card class="grey lighten-4">
+    <v-card style="background-color:  #48aaf912">
         <v-card-title class="d-flex justify-center text-center">
-            <p class="my-0 sub-heading"  style="width: 100%;">
+            <p class="my-0 heading"  style="width: 100%; color: #ec2027;">
                 Diani Sunrise Estate
             </p>
         </v-card-title>
         <v-row>
-            <v-col class="col-12 pa-2">
+            <v-col class="col-12 pa-2" style="position: relative;">
+                <span
+                @click="previousPhoto"
+                class="pointer"
+                style="
+                    position: absolute;
+                    top: 50%;
+                    left: 5%;
+                    z-index: 99;
+                ">
+                    <v-icon class="rounded grey">
+                        mdi-arrow-left
+                    </v-icon>
+                </span>
                 <v-img class="img rounded lighten-4 ma-4"
                 v-if="img_source == 'sunrise_0.png'"
                 contain
@@ -33,6 +46,18 @@
                 contain
                 :src="require(`../../assets/sunrise_4.png`)"
                 />
+                <span 
+                @click="nextPhoto"
+                class="pointer"
+                style="
+                    position: absolute;
+                    top: 50%;
+                    right: 5%;
+                ">
+                    <v-icon class="rounded grey">
+                        mdi-arrow-right
+                    </v-icon>
+                </span>
             </v-col>
             <v-col class="col-12 d-flex justify-center ">
                 <v-img class="pointer rounded mx-1"
@@ -97,25 +122,25 @@
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"400M off tamarc."}} 
+                {{"4KM to the Beach."}} 
                 </h5>
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"15Min drive from Ukunda Airstrip."}} 
+                {{"1KM off Likoni-Ukunda highway."}} 
                 </h5>
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"6KM off Diani White Sands."}} 
+                {{"9+ Schools within 2KM radius."}} 
                 </h5>
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"Ideal for residential homes or speculative purposes."}} 
+                {{"Value added plots."}} 
                 </h5>
             </v-col>
             <v-col class="col-12 d-flex px-4">
@@ -174,12 +199,30 @@ export default {
             let url = '/' + code
             // this.$router.push(url)
             window.location = url
-            },
-    },  
-
-    mounted(){
-        this.triggerChanges()
-    }
+        },
+        nextPhoto(){
+            console.log(this.counter)
+            if(this.counter == 4){
+                this.counter = 0
+            } else {
+                this.counter ++
+            }
+            
+            let image_name = 'sunrise_' + this.counter
+            this.changeSource(image_name, true)
+        },
+        previousPhoto(){
+            console.log(this.counter)
+            if(this.counter == 0){
+                this.counter = 4
+            } else {
+                this.counter --
+            }
+            
+            let image_name = 'sunrise_' + this.counter
+            this.changeSource(image_name, true)
+        }
+    },
 }
 </script>
 <style lang="css" scoped>

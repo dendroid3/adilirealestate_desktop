@@ -129,7 +129,7 @@
       </v-col>
       
       </v-col>
-      <v-col class="col-4 d-flex justify-center grey py-2 rounded lighten-4">
+      <v-col class="col-4 d-flex justify-center pale-blue py-2 rounded">
 
         <v-form ref="form" class="" style="width: 90%;"
           v-model="valid"
