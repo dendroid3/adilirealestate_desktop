@@ -31,12 +31,6 @@
       contain
       :src="require(`../../assets/banners/05.png`)"
       />
-      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter >= 5"
-      @click="goSunrise"
-      contain
-      :src="require(`../../assets/banners/01.jpeg`)"
-      />
     </div>
   </div>
 </template>
@@ -46,7 +40,7 @@ export default {
   name: 'topPic',
   data(){
     return {
-      counter: 5,
+      counter: 0,
       in_transit: false
     }
   },
@@ -61,7 +55,7 @@ export default {
     //     this.in_transit = true
     //   }, 1000);
     setInterval(() => {
-      if(this.counter < 6){
+      if(this.counter < 5){
         this.counter ++
       } else {
         this.counter = 0
