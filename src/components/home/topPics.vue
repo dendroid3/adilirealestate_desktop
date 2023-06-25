@@ -2,40 +2,40 @@
 <div class="pa-0 my-0"
   style="z-index:02;"> 
     <div style=" max-height: 70vh;">
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter == 0"
       @click="goSunrise"
       contain
       :src="require(`../../assets/banners/01.jpeg`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter == 1"
       @click="goSunrise"
       :src="require(`../../assets/banners/02.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter == 2"
       contain
       @click="goSunrise"
       :src="require(`../../assets/banners/03.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter == 3"
       contain
       @click="goSunrise"
       :src="require(`../../assets/banners/04.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter == 4"
       @click="goSunrise"
       contain
-      :src="require(`../../assets/banners/01.jpeg`)"
+      :src="require(`../../assets/banners/05.png`)"
       />
-      <v-img style=" max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__slideInRight"
+      <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
       v-show="counter >= 5"
       @click="goSunrise"
       contain
-      :src="require(`../../assets/banners/05.png`)"
+      :src="require(`../../assets/banners/01.jpeg`)"
       />
     </div>
   </div>
