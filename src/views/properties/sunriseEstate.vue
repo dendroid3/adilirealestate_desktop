@@ -112,19 +112,35 @@
             <v-icon x-small class="green--text mx-1">
               mdi-circle
             </v-icon>
-            {{"400M off tamarc"}} 
+              {{"Value Added Plots - Fenced and Gated."}} 
           </h5>
+          
           <h5 class="d-flex"> 
             <v-icon x-small class="green--text mx-1">
               mdi-circle
             </v-icon>
-            {{"15Min drive from Ukunda Airstrip"}} 
+              {{"1KM off Lungalunga Highway."}} 
           </h5>
+          
           <h5 class="d-flex"> 
             <v-icon x-small class="green--text mx-1">
               mdi-circle
             </v-icon>
-             {{"6KM off Diani White Sands"}} 
+              {{"4KM to the Diani Whitesands Beach."}} 
+          </h5>
+          
+          <h5 class="d-flex"> 
+            <v-icon x-small class="green--text mx-1">
+              mdi-circle
+            </v-icon>
+              {{"7KM to Ukunda Airstrip."}} 
+          </h5>
+          
+          <h5 class="d-flex"> 
+            <v-icon x-small class="green--text mx-1">
+              mdi-circle
+            </v-icon>
+              {{"Near Diani 5-star Hotels."}} 
           </h5>
         </v-col>
         
@@ -247,170 +263,6 @@
               <v-btn class="success mb-4" :disabled="!bookValid" :loading="book_loading" @click="book"> book </v-btn>
             </div>
           </v-form>
-        </v-col>
-      </v-row>
-      <v-row class="no-gutters">
-        <v-col class="col-12 d-flex justify-center animate__animated animate__zoomIn heading blue--text">
-          How To Buy
-        </v-col>
-        <v-col class="col-8 offset-2">
-          <!-- <h2 class="blue--text pl-2"></h2> -->
-        <v-container>
-          <v-timeline
-            dense
-            clipped
-          >
-            <v-timeline-item
-              class="mb-4"
-              color="red"
-              small
-            >
-              <v-row justify="space-between">
-                <v-col cols="12" class="blue--text">
-                  <p class="sub-heading">
-                    Contact Us
-                  </p>
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  <v-img class="img rounded lighten-4 my-1"
-                  contain
-                  :aspect-ratio="5/2"
-                  :src="require(`../../assets/contact_us.svg`)"
-                  />
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  Contact us for any enquiry or to book site visit. You may also book a site visit on one of the two forms at the end of this page.
-                </v-col>
-              </v-row>
-            </v-timeline-item>
-            <v-timeline-item
-              class="mb-4"
-              color="red"
-              small
-            >
-              <v-row justify="space-between">
-                <v-col cols="12" class="blue--text">
-                  <p class="sub-heading">
-                    Visit Site
-                  </p>
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  <v-img class="img rounded lighten-4 my-1"
-                  contain
-                  :aspect-ratio="5/2"
-                  :src="require(`../../assets/site_visit.svg`)"
-                  />
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  Site visits are arranged at an individual level and happen every day of the weekend. It is a this point where you may incorporate the services of your land surveryor of choice.
-                </v-col>
-              </v-row>
-            </v-timeline-item>
-            <v-timeline-item
-              class="mb-4"
-              color="red"
-              small
-            >
-              <v-row justify="space-between">
-                <v-col cols="12" class="blue--text">
-                  <p class="sub-heading">
-                    Clear Payment
-                  </p>
-                </v-col>
-                
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  <v-img class="img rounded lighten-4 my-1"
-                  contain
-                  :aspect-ratio="8/2"
-                  :src="require(`../../assets/clear_payment.svg`)"
-                  />
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  Upon satisfaction, you may pay the full amount or a deposit to clear the balance in 9 months. You may include the services of your personal advocate at this point.
-                </v-col>
-              </v-row>
-            </v-timeline-item>
-            <v-timeline-item
-              class="mb-4"
-              color="red"
-              small
-            >
-              <v-row justify="space-between">
-                <v-col cols="12" class="blue--text">
-                  <p class="sub-heading">
-                    Get Title Deed
-                  </p>
-                </v-col>
-                
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  <v-img class="img rounded lighten-4 my-1"
-                  contain
-                  :aspect-ratio="5/3"
-                  :src="require(`../../assets/title_deed.svg`)"
-                  />
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  You get a stand-in title deed upon completion of payment. You then may have to wait between 3-6 months fir the actual title deed to be processed.
-                </v-col>
-              </v-row>
-            </v-timeline-item>
-            <v-timeline-item
-              class="mb-4"
-              color="red"
-              small
-            >
-              <v-row justify="space-between">
-                <v-col cols="12" class="blue--text">
-                  <p class="sub-heading">
-                    Develop
-                  </p>
-                </v-col>
-                
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  <v-img class="img rounded lighten-4 my-1"
-                  contain
-                  :aspect-ratio="5/2"
-                  :src="require(`../../assets/develop.svg`)"
-                  />
-                </v-col>
-                <v-col
-                  class=""
-                  cols="12"
-                >
-                  The land is yours, develop it or let it hibernate. 
-                </v-col>
-              </v-row>
-            </v-timeline-item>
-          </v-timeline>
-        </v-container>
-        
         </v-col>
       </v-row>
     </div>

@@ -133,19 +133,25 @@
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"15Min drive from Ukunda Airstrip."}} 
+                {{"1KM from Technical University of Mombasa."}} 
                 </h5>
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"6KM off Diani White Sands."}} 
+                {{"15Min Drive to Ukunda Airstrip."}} 
                 </h5>
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"Ideal for residential homes or speculative purposes."}} 
+                {{"20Min Drive to Diani Beach."}} 
+                </h5>
+                <h5 class="d-flex"> 
+                <v-icon x-small class="green--text mx-1">
+                    mdi-circle
+                </v-icon>
+                {{"Water and Electricity on-site."}} 
                 </h5>
             </v-col>
             <v-col class="col-12 d-flex px-4">

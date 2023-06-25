@@ -122,25 +122,35 @@
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"4KM to the Beach."}} 
+                {{"Value Added - Fenced and Gated."}} 
                 </h5>
+                
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"1KM off Likoni-Ukunda highway."}} 
+                {{"1Km off Lungalunga Highway."}} 
                 </h5>
+                
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"9+ Schools within 2KM radius."}} 
+                {{"4KM to the Diani Whitesands Beach."}} 
                 </h5>
+                
                 <h5 class="d-flex"> 
                 <v-icon x-small class="green--text mx-1">
                     mdi-circle
                 </v-icon>
-                {{"Value added plots."}} 
+                {{"7KM to Ukunda Airstrip."}} 
+                </h5>
+                
+                <h5 class="d-flex"> 
+                <v-icon x-small class="green--text mx-1">
+                    mdi-circle
+                </v-icon>
+                {{"Near Diani 5-Star Hotels."}} 
                 </h5>
             </v-col>
             <v-col class="col-12 d-flex px-4">

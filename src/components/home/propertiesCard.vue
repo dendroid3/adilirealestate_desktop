@@ -4,10 +4,10 @@
       Available Properties 
     </div>
     <v-row class="mb-4">  
-      <v-col class="col-4 offset-2">
+      <v-col class="col-5 offset-1">
         <diani-crystal />
       </v-col>
-      <v-col class="col-4">
+      <v-col class="col-5">
         <diani-sunrise />
       </v-col>
     </v-row>
