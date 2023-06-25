@@ -156,7 +156,7 @@
               <p class="text-center sub-heading"> Quick Message</p>
               <v-spacer />
   
-              <v-btn small class="success" @click="enquireFunction(false)"> Book </v-btn>
+              <!-- <v-btn small class="success" @click="enquireFunction(false)"> Book </v-btn> -->
             </div>
             <v-text-field
             :rules="rules.requiredRule"
@@ -240,14 +240,6 @@
             type="number"
             outlined
             clearable />
-            <v-text-field
-            :rules="bookRules"
-            placeholder="pick the date you are available"
-            v-model="book_data.dates"
-            label="availability"
-            type="name"
-            outlined
-            clearable />
             <v-textarea
             :rules="bookRules"
             placeholder="additional comment"
@@ -303,7 +295,7 @@
     data(){
       return{
         contact_data: {
-          subject: '#Diani Crystal Garden'
+          subject: '#Diani Sunrise Garden'
         },
         book_data: {},
         book_loading: false,
@@ -322,55 +314,11 @@
     },
     methods: {
       ...mapActions(['toogleAlertBox']),
-      async enquireMethod(){
-        try{
-          console.log(this.contact_data)
-          this.enquire_loading = true
-          const response = await
-          axios.post('https://api.adilirealestate.com/api/enquire', this.contact_data).then((response) => {
-            console.log(response)
-            const alert_box_info = {
-              status: true,
-              information: 'Enquiry recorded successfully, we shall get in touch as soon as possible.',
-              code: 'success'
-            }
-            this.toogleAlertBox(alert_box_info)
-            this.contact_data = {
-              subject: '#Diani Crystal Garden'
-            }
-            this.enquire_loading = false
-          })
-          console.log(response)
-        } catch(e){
-          console.log(e)
-        }
-      },
       changeSource(code){
         this.img_source = code
       },
       enquireFunction(code){
         this.enquire = code
-      },
-      async book(){
-        try{
-          console.log(this.book_data)
-          this.book_loading = true
-          const response = await
-          axios.post('https://api.adilirealestate.com/api/book', this.book_data).then((response) => {
-            console.log(response)
-            const alert_box_info = {
-              status: true,
-              information: 'Site visit recorded successfully, we shall get in touch as soon as possible.',
-              code: 'success'
-            }
-            this.toogleAlertBox(alert_box_info)
-            this.book_data = {}
-            this.book_loading = false
-          })
-          console.log(response)
-        } catch(e){
-          console.log(e)
-        }
       }
     }
   }

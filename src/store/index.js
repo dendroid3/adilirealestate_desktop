@@ -9,12 +9,14 @@ import auth from './modules/auth'
 import properties from './modules/properties'
 import units from './modules/units'
 import ui from './modules/ui'
+import adili from './modules/adili'
 export default new Vuex.Store({
   modules: {
     auth,
     properties,
     units,
-    ui
+    ui,
+    adili
   },
   plugins: [
     createPersistedState({
