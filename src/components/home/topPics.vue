@@ -55,7 +55,7 @@ export default {
     //     this.in_transit = true
     //   }, 1000);
     setInterval(() => {
-      if(this.counter < 5){
+      if(this.counter < 4){
         this.counter ++
       } else {
         this.counter = 0
