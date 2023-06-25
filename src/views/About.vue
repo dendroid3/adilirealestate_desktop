@@ -24,7 +24,7 @@
       <v-col class="col-8 offset-2">
         <h2 class="blue--text heading">MISSION</h2>
         <p>
-          To provide our customers with the best land opportunity in emerging markets for mutual benefits.
+          Our mission is to make land ownership a worthy investment for all by providing affordable properties that offer value for money.
         </p>
         <h2 class="blue--text heading">VISION</h2>
         <p class="body-text">
