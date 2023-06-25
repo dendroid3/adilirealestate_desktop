@@ -3,30 +3,30 @@
   style="z-index:02;"> 
     <div style=" max-height: 70vh;">
       <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter == 0"
+      v-show="counter < 3"
       @click="goSunrise"
       contain
       :src="require(`../../assets/banners/01.jpeg`)"
       />
       <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter == 1"
+      v-show="counter == 3"
       @click="goSunrise"
       :src="require(`../../assets/banners/02.png`)"
       />
       <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter == 2"
+      v-show="counter == 4"
       contain
       @click="goSunrise"
       :src="require(`../../assets/banners/03.png`)"
       />
       <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter == 3"
+      v-show="counter == 5"
       contain
       @click="goSunrise"
       :src="require(`../../assets/banners/04.png`)"
       />
       <v-img style="min-width: 100vw; max-height: 70vh;" class="rounded lighten-4 ma-0 pointer animate__animated animate__fadeIn"
-      v-show="counter == 4"
+      v-show="counter == 6"
       @click="goSunrise"
       contain
       :src="require(`../../assets/banners/05.png`)"
@@ -55,12 +55,12 @@ export default {
     //     this.in_transit = true
     //   }, 1000);
     setInterval(() => {
-      if(this.counter < 4){
+      if(this.counter < 6){
         this.counter ++
       } else {
         this.counter = 0
       }
-    }, 2500);
+    }, 4000);
   }
 }
 </script>
