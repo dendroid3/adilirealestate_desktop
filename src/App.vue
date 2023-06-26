@@ -232,7 +232,7 @@ export default {
         this.go('dashboard')
     },
   },
-  mounted(){
+  created() {
     if(this.isMobile){
       let url = 'https://m.adilirealestate.com'
       window.location = url

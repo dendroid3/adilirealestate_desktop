@@ -50,10 +50,6 @@ export default {
     }
   },
   mounted(){
-    
-    // setInterval(() => {
-    //     this.in_transit = true
-    //   }, 1000);
     setInterval(() => {
       if(this.counter < 6){
         this.counter ++
