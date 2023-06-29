@@ -309,6 +309,28 @@ export default {
     changeSource(code){
       this.img_source = code
     },
+    async enquireMethod(){
+        try{
+          this.enquire_loading = true
+          const response = await
+          axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
+            console.log(response)
+            const alert_box_info = {
+              status: true,
+              information: 'Enquiry recorded successfully, we shall get in touch as soon as possible.',
+              code: 'success'
+            }
+            this.toogleAlertBox(alert_box_info)
+            this.contact_data = {
+              subject: '#Diani Crystal Garden'
+            }
+            this.enquire_loading = false
+          })
+          console.log(response)
+        } catch(e){
+          console.log(e)
+        }
+      },
   }
 }
 </script>

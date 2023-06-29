@@ -113,57 +113,6 @@
             </div>
           </div>
         </div>
-        <!-- <v-form ref="form" class="" style="width: 90%;"
-          v-model="valid"
-          :lazy-validation="lazy">
-          <p class="text-center sub-heading"> Book Site Visit </p>
-          <v-text-field
-          :rules="bookRules"
-          placeholder="name"
-          v-model="book_data.name"
-          label="name"
-          type="name"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="email"
-          v-model="book_data.email"
-          label="email"
-          type="name"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="phone number"
-          v-model="book_data.phone_number"
-          label="phone number"
-          type="number"
-          outlined
-          clearable />
-          <v-text-field
-          :rules="bookRules"
-          placeholder="pick the date you are available"
-          v-model="book_data.dates"
-          label="availability"
-          type="name"
-          outlined
-          clearable />
-          <v-textarea
-          :rules="bookRules"
-          placeholder="additional comment"
-          v-model="book_data.message"
-          label="additional commment"
-          type="name"
-          outlined
-          clearable />
-          <p class="text-center">
-            {{"Site visits are prearranged and available any day of the weekend. Fill this form to initiate the process. We will get back to you"}}
-          </p>
-          <div  class="d-flex justify-end">
-            <v-btn class="success mb-4" :disabled="!bookValid" :loading="book_loading" @click="book"> book </v-btn>
-          </div>
-        </v-form> -->
       </v-col>
       <v-col class="col-5 offset-1 d-flex justify-center">
         <v-form ref="form" class="" style="width: 90%;"
@@ -305,10 +254,9 @@
       },
       async enquire(){
         try{
-          console.log(this.contact_data)
           this.enquire_loading = true
           const response = await
-          axios.post('https://api.adilirealestate.com/api/enquire', this.contact_data).then((response) => {
+          axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
             console.log(response)
             const alert_box_info = {
               status: true,
@@ -328,10 +276,9 @@
       },
       async book(){
         try{
-          console.log(this.book_data)
           this.book_loading = true
           const response = await
-          axios.post('https://api.adilirealestate.com/api/book', this.book_data).then((response) => {
+          axios.post(process.env.VUE_APP_API + '/api/book', this.book_data).then((response) => {
             console.log(response)
             const alert_box_info = {
               status: true,

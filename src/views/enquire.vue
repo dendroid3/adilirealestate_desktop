@@ -100,7 +100,7 @@ export default {
         console.log(this.contact_data)
         this.enquire_loading = true
         const response = await
-        axios.post('https://api.adilirealestate.com/api/enquire', this.contact_data).then((response) => {
+        axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {
           console.log(response)
           const alert_box_info = {
             status: true,
