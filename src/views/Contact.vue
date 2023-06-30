@@ -255,7 +255,6 @@
       },
       async enquire(){
         try{
-          console.log(this.contact_data)
           this.enquire_loading = true
           const response = await
           axios.post(process.env.VUE_APP_API + '/api/enquire', this.contact_data).then((response) => {

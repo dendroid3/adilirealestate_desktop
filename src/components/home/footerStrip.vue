@@ -20,7 +20,7 @@
               outlined
               clearable />
               <div class="d-flex justify-center mt-2">
-                <v-btn text class="success bold white--text mx-2">
+                <v-btn text class="success bold white--text mx-2" :loading="sending_subsription_request" @click="subscribe"  :disabled="!email_is_valid">
                   Subscribe
                 </v-btn>
               </div>
@@ -207,18 +207,34 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
+import axios from 'axios'
 export default {
   name: 'footerStrip',
   computed:{
-    ...mapGetters(['getUser'])
+    ...mapGetters(['getUser']),
+    email_is_valid(){
+      if(!this.email) {
+        return false
+      }
+      if(
+        (this.email.indexOf('@') > 1) && 
+        (this.email.lastIndexOf('.') > this.email.indexOf('@')) &&
+        (this.email.lastIndexOf('.') < (this.email.length - 1))
+      ){
+        return true
+      } 
+      return false
+    }
   },
   data: () => {
     return{
-      email: null
+      email: null,
+      sending_subsription_request: false
     }
   },
   methods: {
+    ...mapActions(['toogleAlertBox']),
     go(code){
       window.open('/' + code, '_self')
     },
@@ -252,6 +268,27 @@ export default {
       let url = `https://www.twitter.com/AdiliRealEstate/`
       window.open(url, '_blank')
     },
+    async subscribe(){
+      try{
+        this.sending_subsription_request = true
+        axios.post(process.env.VUE_APP_API + '/api/subscribe', {email: this.email}).then((res) => {
+        console.log(res)
+        this.sending_subsription_request = false
+        
+        const alert_box_info = {
+          status: true,
+          information: 'Thank you for subscribing.',
+          code: 'success'
+        }
+        this.toogleAlertBox(alert_box_info)
+
+      }) 
+      } catch(err) {
+        console.log(err)
+        this.sending_subsription_request = false
+
+      }
+    }
   }
 }
 </script>
