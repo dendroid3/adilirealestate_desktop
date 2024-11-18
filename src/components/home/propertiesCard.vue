@@ -8,13 +8,13 @@
       <v-col class="col-10">
         <v-row>
           <v-col class="col-4">
-            <diani-crystal />
+            <diani-sunrise-two />
           </v-col>
           <v-col class="col-4">
             <diani-sunrise />
           </v-col>
           <v-col class="col-4">
-            <diani-sunrise-two />
+            <diani-crystal />
           </v-col>
         </v-row>
       </v-col>
