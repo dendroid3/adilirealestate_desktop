@@ -4,12 +4,21 @@
       Available Properties 
     </div>
     <v-row class="mb-4">  
-      <v-col class="col-5 offset-1">
-        <diani-crystal />
+      <v-col class="col-1"></v-col>
+      <v-col class="col-10">
+        <v-row>
+          <v-col class="col-4">
+            <diani-crystal />
+          </v-col>
+          <v-col class="col-4">
+            <diani-sunrise />
+          </v-col>
+          <v-col class="col-4">
+            <diani-sunrise-two />
+          </v-col>
+        </v-row>
       </v-col>
-      <v-col class="col-5">
-        <diani-sunrise />
-      </v-col>
+      <v-col class="col-1"></v-col>
     </v-row>
   </div>
 </template>
@@ -17,13 +26,15 @@
   import propertyCard from "./propertyCard.vue"
   import dianiCrystal from "../properties/dianiCrystal.vue"
   import dianiSunrise from "../properties/dianiSunrise.vue"
+  import dianiSunriseTwo from "../properties/dianiSunriseTwo.vue"
 
   export default{
     name: 'propertiesCard',
     components:{
       propertyCard,
       dianiCrystal,
-      dianiSunrise
+      dianiSunrise,
+      dianiSunriseTwo
     },
     data(){
       return{

@@ -137,6 +137,11 @@ const routes = [
     component: () => import('../views/properties/sunriseEstate.vue')
   },
   {
+    path: '/property/diani-sunrise-estate-phase-two',
+    name: 'MyProperty',
+    component: () => import('../views/properties/sunriseEstateTwo.vue')
+  },
+  {
     path: '/add_property',
     name: 'AddProperty',
     component: () => import('../views/AddProperty.vue')
